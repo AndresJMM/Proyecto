@@ -1,2 +1,2 @@
-# prueba
-Mi primer repositorio
+# POYECTO
+by IBAI, ANDRÉS, ALEJANDRA & ALFONSO
