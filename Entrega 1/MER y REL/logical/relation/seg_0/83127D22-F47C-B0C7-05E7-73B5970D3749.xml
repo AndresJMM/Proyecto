@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Trabajador_Centro_FK" directorySegmentName="seg_0" id="83127D22-F47C-B0C7-05E7-73B5970D3749">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>0466A305-3F34-D9EF-2365-78EE58A6E828</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<sourcePk>B19A9B11-A796-E8E2-73D8-4BF0AC6AC3F8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DEB8F24F-BE19-DC38-E149-5CF07B9613A8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4BF9BCB6-D766-6A70-B47B-A15450862FF4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

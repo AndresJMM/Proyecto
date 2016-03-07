@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Albaran_Coche_FK" directorySegmentName="seg_0" id="7697C919-14A6-68F0-D70F-64F6AB0B9A8D">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>BB4152CE-69B3-496D-3367-43AB69FB33A5</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<sourcePk>47223A9B-528F-A7BC-321E-3D0E714223AE</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D450D19F-8981-86B0-9D2A-FF36E812A9B4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D1B29FAE-76B0-2CF3-58E3-57700A0A686C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

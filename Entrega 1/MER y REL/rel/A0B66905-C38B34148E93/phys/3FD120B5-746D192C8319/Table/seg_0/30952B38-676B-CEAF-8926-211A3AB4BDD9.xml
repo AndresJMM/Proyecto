@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Albaran" directorySegmentName="seg_0" id="30952B38-676B-CEAF-8926-211A3AB4BDD9">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="`idAlbaran`" id="15BD0477-7914-082D-8170-76135CC34CAE">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Parte_`idParte`" id="4EE3CD2A-A4B5-D78C-F52E-ABCC9D06119F">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Coche_`matricula`" id="640C284E-5A64-D843-AF2F-9C9D7B8B754A">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:14 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="`horaLlegada`" id="6E7035AE-33FF-E4BF-C186-E789256622D0">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="`horaSalida`" id="C6D53C0D-6535-484E-1672-E9731558211B">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Albaran_Parte_FK" id="26815CA5-C371-A310-35E6-D66BD978A2A0">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Albaran_Coche_FK" id="840C0722-C0B9-9AF1-AF54-C6F7404D526E">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:14 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Albaran_PK" id="14F84084-D093-9A0C-669E-18F27F23B80E">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

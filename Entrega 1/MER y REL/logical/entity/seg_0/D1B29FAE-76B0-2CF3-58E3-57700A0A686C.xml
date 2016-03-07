@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D1B29FAE-76B0-2CF3-58E3-57700A0A686C" name="Albaran">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>30952B38-676B-CEAF-8926-211A3AB4BDD9</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idAlbaran" id="EDD7A53A-9DA4-C99B-7128-5E14154B4CB5">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>15BD0477-7914-082D-8170-76135CC34CAE</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaSalida" id="583E5859-FECE-E2F8-A93F-5E2E18C8DE11">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>C6D53C0D-6535-484E-1672-E9731558211B</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E4306BA2-DBB2-1B2E-57A7-14A1F9A1A90E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaLlegada" id="7D8BC499-42EA-68DB-F093-8CDFDC6FAFAC">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>6E7035AE-33FF-E4BF-C186-E789256622D0</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>E4306BA2-DBB2-1B2E-57A7-14A1F9A1A90E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idParte" id="AE2DAB07-D8E0-3EE1-AB8B-E9A408B866A9">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>FDEC32F4-B479-77C8-F9DB-F3B38D2F22E8</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<referedAttribute>AFB8181D-7149-C997-BC3D-83CA7DD8CE4A</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="matricula" id="EB40D553-7E24-6488-0959-07AFF06D4575">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>7697C919-14A6-68F0-D70F-64F6AB0B9A8D</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5E64ED4B-E1E1-2BAF-51BA-AC4AE2320C8C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>42FE2E08-F9CF-2F84-1131-77C2438166D4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5ED95E1D-2478-F3D2-6BEB-177FF6CE4EAF" name="Albaran PK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>14F84084-D093-9A0C-669E-18F27F23B80E</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EDD7A53A-9DA4-C99B-7128-5E14154B4CB5</attributeRef>
+<attributeRef>AE2DAB07-D8E0-3EE1-AB8B-E9A408B866A9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

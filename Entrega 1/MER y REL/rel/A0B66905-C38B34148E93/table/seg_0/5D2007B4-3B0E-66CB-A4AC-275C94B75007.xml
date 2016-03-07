@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D2007B4-3B0E-66CB-A4AC-275C94B75007" name="Centro">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>03E1E162-9CC6-12E0-8D40-801AB8D772ED</importedID>
+<ordsAlias>ifv1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCentro" id="1FD9CA71-2DE9-3F20-E8F5-4026FF62D134">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>D904EFA5-EBD1-D093-B456-AEAB27E9B0E7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="4B903E71-5AD0-2C55-78A8-649ADD7E78AE">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>5454A94F-9299-410F-FC6C-7BEF82AA7A49</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>53D70C85-79C5-334C-F444-15D4EEB38753</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="04C03876-75B7-7245-5A86-B1D3E819FC0B">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>65E94738-3A49-A9A0-CD89-CE7F4994FCC8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A8119F4F-6AC1-AFE2-D6DB-16A85CEE77FA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="04D09BFC-2C60-6601-2F0B-1F8875116616" name="Centro_PK">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>B70845FF-D818-411E-B994-86378C7AE535</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1FD9CA71-2DE9-3F20-E8F5-4026FF62D134"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

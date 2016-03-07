@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8F39A225-E94E-0699-E3B2-5EC5C7FC9083" containerWithKeyObject="30952B38-676B-CEAF-8926-211A3AB4BDD9" localFKIndex="26815CA5-C371-A310-35E6-D66BD978A2A0" name="Albaran_Parte_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>18FEEF16-AD6A-FE8C-6A45-CE9B8F58CC21</referredTableID>
+<keyObject>B330F5BF-369D-6B84-B1A2-5CD78AA42874</keyObject>
+<referredKeyID>B330F5BF-369D-6B84-B1A2-5CD78AA42874</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

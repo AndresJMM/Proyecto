@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="227B6D38-E9AC-E177-908B-5C12AA8A36FF" name="LocTrabajador">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>8E97A278-C09E-7009-139E-416B16CE8828</importedID>
+<ordsAlias>ifv4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="calle" id="99881863-2921-662B-4F4F-7E040FCA21C2">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>5F798E41-6706-2466-A942-D7E5C4C01E5F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>53D70C85-79C5-334C-F444-15D4EEB38753</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="portal" id="61A55C2E-8FFE-FCC6-F736-20747F2DEECC">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>239DE44B-2C79-C127-1C4D-BF9FD36DD2E2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9543E068-BEF4-858D-E105-FE7B9CC2C1EC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="piso" id="1B500E8E-EE6C-15B9-C9CE-8F12CC66FC90">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>147BC7CF-5292-3CD5-135F-BE8D5E3331F0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9543E068-BEF4-858D-E105-FE7B9CC2C1EC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mano" id="923E2C67-CBD9-6FD8-2E99-D160F3595243">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>051C7444-AF3F-995D-1FCF-5425352058D3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>72DF8F95-C92E-1EEB-ABF8-7BC241929542</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Trabajador_DNI" id="322D078F-3705-99B7-8E7E-D8935D13D324">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:55:44 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A8119F4F-6AC1-AFE2-D6DB-16A85CEE77FA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0775AD2-2245-A261-4111-C721324E6EC9" referredColumn="72888529-8BAE-D239-7BE6-2A04B13FECA1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8769FABD-09BC-897F-59CD-77F11E7DF289" name="LocTrabajador_PK">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<importedID>86929FA1-4AE9-9340-1EE6-FCB710BB5288</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="322D078F-3705-99B7-8E7E-D8935D13D324"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CBF978DF-C73C-FBD1-AE02-7E9A842606AF" name="LocTrabajador_Trabajador_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:55:44 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="322D078F-3705-99B7-8E7E-D8935D13D324"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

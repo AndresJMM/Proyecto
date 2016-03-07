@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="LocTrabajador_Trabajador_FK" directorySegmentName="seg_0" id="75C114D8-8835-66C9-2A00-9AD0EC285503">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>D0775AD2-2245-A261-4111-C721324E6EC9</generatorID>
+<ownerDesignName>MER y REL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<sourcePk>0B4E51B9-CB4F-EBC0-DBF7-478605D03002</sourcePk>
+<dominantRole>4BF9BCB6-D766-6A70-B47B-A15450862FF4</dominantRole>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4BF9BCB6-D766-6A70-B47B-A15450862FF4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>E8CD217A-0FB9-A0EE-87A9-55574AAF80BD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>
