@@ -1,0 +1,232 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4BF9BCB6-D766-6A70-B47B-A15450862FF4" name="Trabajador">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>EED9F064-D558-424E-A26F-69D0008186A1</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idTrabajador" id="A0DDC9F8-3526-F034-7C79-0E700441568E">
+<createdBy>andrés</createdBy>
+<createdTime>2016-03-10 11:24:19 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="DNI" id="13D7C77C-68A5-5F53-419D-4A6108774904">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>72888529-8BAE-D239-7BE6-2A04B13FECA1</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+</Attribute>
+<Attribute name="nombre" id="11EDBACC-4A47-BB01-4188-F81C7AA28C55">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>B1AB3861-39B7-BBE2-72FC-9ECBB1C8FB91</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+</Attribute>
+<Attribute name="ape1" id="733ECBF1-F653-F1AF-CE33-9B0600118858">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>DFE16D7E-9346-03BD-2247-DF7D2625D1A1</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+</Attribute>
+<Attribute name="ape2" id="50E62A63-7C3E-2A37-5174-AFB90099E651">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>43481648-BF73-A743-65B7-8BF7334D180A</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+</Attribute>
+<Attribute name="fechaNac" id="C505967D-7764-F80B-533B-81D1D4F763DE">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>21F67980-18DD-A08A-2E41-E2554610AA00</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="salario" id="567137AE-A759-497D-6B03-A6030CEBDE91">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>76591A85-C9C1-ADCC-CFA6-119103EFAD08</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+</Attribute>
+<Attribute name="movilEmp" id="0C6D9C0B-FE1F-7725-920F-9C8B3AE4BD32">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>82164C74-282F-E846-1601-163432EDECD5</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+</Attribute>
+<Attribute name="tlfPersonal" id="DDF6DD35-5950-6664-D88B-18D72C4975EA">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>7B197704-C6D1-7AE2-5B7B-D424CCC637DA</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+</Attribute>
+<Attribute name="calle" id="11038C1D-1233-6089-1518-F41FFA063CD7">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>DF03AC62-4C4F-1A21-C679-A0413C105F5D</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+</Attribute>
+<Attribute name="portal" id="55F47D8C-4A8B-4CA9-068D-2361F6F003F1">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>3A7397D4-D5C1-643A-D98E-26DBF36DDEB2</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+</Attribute>
+<Attribute name="piso" id="3902BA3D-89BF-6E62-7C93-3903F1B2BABB">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>6BA3A826-E03A-480E-B676-C7A1E7E183C8</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+</Attribute>
+<Attribute name="mano" id="D7D7E679-11A1-8FFA-9B66-6D3E234DF49A">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>4C6A291B-1D49-7C7E-4672-1CE7CB3CAE97</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="TipoTrabajador idTipo" id="50672EDE-015B-F413-2D33-D597130BFF6B">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>9C1DAC54-0D1C-34B4-5057-EEFBD7501B5D</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<referedAttribute>11D1377A-0E27-3907-8675-6D8CF1F24AFE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Centro idCentro" id="E9F22E13-8D23-987C-BD16-39B77A1BF1D0">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>83127D22-F47C-B0C7-05E7-73B5970D3749</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<referedAttribute>595D7439-1094-1D31-359B-221DC02DD32D</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0B4E51B9-CB4F-EBC0-DBF7-478605D03002" name="Trabajador PK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>E8A9410A-030F-E050-479A-EE2D55BB8B81</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A0DDC9F8-3526-F034-7C79-0E700441568E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

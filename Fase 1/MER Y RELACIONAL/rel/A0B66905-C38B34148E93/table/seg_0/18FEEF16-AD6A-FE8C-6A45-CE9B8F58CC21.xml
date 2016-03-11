@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="18FEEF16-AD6A-FE8C-6A45-CE9B8F58CC21" name="Parte">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>59F6BA70-0957-BB8B-FA7F-DCC39CB81521</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idParte" id="43DD960A-BDB6-D1A4-C48B-C2D68BEAE07F">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>C5767B2B-7B93-910F-A1CB-CB0560E491A6</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoParte_idTipoParte" id="452D1DCA-AB1C-440E-02DC-94D195A4D250">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:50:58 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<delegate>28CAD0B0-BF7B-933C-64C8-69F30D4D4258</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC90E40C-7E3A-C36F-8B2B-1403FBD0800A" referredColumn="28CAD0B0-BF7B-933C-64C8-69F30D4D4258"/>
+</associations>
+</Column>
+<Column name="Trabajador_idTrabajador" id="B88474E8-4AD4-0A44-35BF-A46F404171AC">
+<createdBy>andrés</createdBy>
+<createdTime>2016-03-10 12:14:56 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>0C551AB5-E62A-A5A3-14C8-CA17E20228F3</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05905AB9-2C0E-08FF-A5F2-A826850A9DA0" referredColumn="0C551AB5-E62A-A5A3-14C8-CA17E20228F3"/>
+</associations>
+</Column>
+<Column name="fecha" id="430E7678-09CF-4554-A926-AB126A2559EE">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-07 11:08:52 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>E9FB862B-DF0D-4BCA-1F2D-957493D4EA80</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kmIni" id="5AF59911-6F17-2EC1-A651-1319A36F1071">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>EAA10B61-713B-136A-CEEB-EE94B105B050</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="kmFin" id="3B4D6D8C-691F-3F5D-0A42-205CA7324103">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>53DDFF4F-C7A7-0641-4671-B396F8BEEEC9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gastoPeaje" id="AA2F22C2-0114-E895-CB80-D0915714B2E3">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>B7C446A0-1533-CD96-2A87-23BF50CDD498</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gastoDieta" id="A00890C7-812B-B723-5507-B6717AC4BC47">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>75159181-A88E-72B8-7C33-CE0FF32A5A4C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gastoGasoil" id="B8E913C2-EE33-BA97-52EB-8DCC14448CD1">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>38C78A5C-5C89-8344-FF2B-B434C505D824</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gastoAutopista" id="A66E4C82-3FDC-2779-E689-4671FCFF29A8">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>48FF8FD3-8BFE-27A4-BD20-C4A07452F1E5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="otrosGastos" id="1FEF5C79-5CBD-AC40-9A38-EBD65703B091">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>DBEB1877-2E1C-9AD9-E899-26E8179D4917</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="57B8DF45-C45E-DD1E-52D3-C540102DB87B">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-07 10:54:04 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B330F5BF-369D-6B84-B1A2-5CD78AA42874" name="Parte_PK">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>BBBD7CFA-7137-147D-AB1E-C4868984BD82</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43DD960A-BDB6-D1A4-C48B-C2D68BEAE07F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7F9871F-385F-51C3-9FA0-C2AA14E7E654" name="Parte_Trabajador_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:50:48 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B88474E8-4AD4-0A44-35BF-A46F404171AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0D35D16-510B-F0F7-FC04-A749CE7CCCA1" name="Parte_TipoParte_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:50:58 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="452D1DCA-AB1C-440E-02DC-94D195A4D250"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

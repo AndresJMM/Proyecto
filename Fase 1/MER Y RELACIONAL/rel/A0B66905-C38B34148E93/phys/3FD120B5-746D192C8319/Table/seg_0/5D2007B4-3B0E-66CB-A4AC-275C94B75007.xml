@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Centro" directorySegmentName="seg_0" id="5D2007B4-3B0E-66CB-A4AC-275C94B75007">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="telefono" id="04C03876-75B7-7245-5A86-B1D3E819FC0B">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numero" id="0C665A15-066F-1BAA-0352-DCB18E2C7B7A">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:42:16 UTC</createdTime>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="provincia" id="1ECE9EA8-5B1C-E7F1-0267-B777937BD11A">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:42:16 UTC</createdTime>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="idCentro" id="1FD9CA71-2DE9-3F20-E8F5-4026FF62D134">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CP" id="3B42CDF7-7F62-846D-7C24-94CEF7A3C3AD">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:42:16 UTC</createdTime>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nombre" id="4B903E71-5AD0-2C55-78A8-649ADD7E78AE">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="calle" id="C8447AB6-7CAA-FCD9-7D2D-50BE52232A3B">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:42:16 UTC</createdTime>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ciudad" id="E54781C4-FA28-A3F2-A397-7871E285FB53">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:42:16 UTC</createdTime>
+<ownerDesignName>simple</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Centro_PK" id="04D09BFC-2C60-6601-2F0B-1F8875116616">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>
