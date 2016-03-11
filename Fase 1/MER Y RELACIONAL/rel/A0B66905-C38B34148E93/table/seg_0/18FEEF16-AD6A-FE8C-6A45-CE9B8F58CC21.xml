@@ -8,6 +8,7 @@
 <importedID>59F6BA70-0957-BB8B-FA7F-DCC39CB81521</importedID>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
 <Column name="idParte" id="43DD960A-BDB6-D1A4-C48B-C2D68BEAE07F">
 <sourceDDLFile>SQL.sql</sourceDDLFile>
@@ -20,6 +21,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="TipoParte_idTipoParte" id="452D1DCA-AB1C-440E-02DC-94D195A4D250">
@@ -31,7 +33,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
-<delegate>28CAD0B0-BF7B-933C-64C8-69F30D4D4258</delegate>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -47,7 +49,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
-<delegate>0C551AB5-E62A-A5A3-14C8-CA17E20228F3</delegate>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -62,6 +64,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <domain>E9FB862B-DF0D-4BCA-1F2D-957493D4EA80</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="kmIni" id="5AF59911-6F17-2EC1-A651-1319A36F1071">
@@ -76,6 +79,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="kmFin" id="3B4D6D8C-691F-3F5D-0A42-205CA7324103">
@@ -91,6 +95,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="gastoPeaje" id="AA2F22C2-0114-E895-CB80-D0915714B2E3">
@@ -105,6 +110,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="gastoDieta" id="A00890C7-812B-B723-5507-B6717AC4BC47">
@@ -119,6 +125,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="gastoGasoil" id="B8E913C2-EE33-BA97-52EB-8DCC14448CD1">
@@ -133,6 +140,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="gastoAutopista" id="A66E4C82-3FDC-2779-E689-4671FCFF29A8">
@@ -147,9 +155,10 @@
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="otrosGastos" id="1FEF5C79-5CBD-AC40-9A38-EBD65703B091">
+<Column name="gastoOtros" id="1FEF5C79-5CBD-AC40-9A38-EBD65703B091">
 <sourceDDLFile>SQL.sql</sourceDDLFile>
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:40:11 UTC</createdTime>
@@ -161,6 +170,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
 <domain>B30B8AA9-8C21-9788-2C12-83EDF9258A6D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="descripcion" id="57B8DF45-C45E-DD1E-52D3-C540102DB87B">
@@ -173,6 +183,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

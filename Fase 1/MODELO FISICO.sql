@@ -72,7 +72,7 @@ CREATE TABLE Parte(
   gastoDieta NUMBER(5,2),
   gastoGasoil NUMBER(5,2),
   gastoAutopista NUMBER(5,2),
-  otrosGastos NUMBER(5,2),
+  gastoOtros NUMBER(5,2),
   descripcion VARCHAR2(250),
   CONSTRAINT pk_Parte_idParte PRIMARY KEY (idParte),
   CONSTRAINT fk_Parte_Trabajador
