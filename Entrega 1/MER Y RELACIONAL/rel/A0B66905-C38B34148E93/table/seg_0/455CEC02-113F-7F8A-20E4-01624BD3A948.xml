@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="455CEC02-113F-7F8A-20E4-01624BD3A948" name="Coche">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>AE91CC61-D687-B02E-0ADB-87EF1B0FFD74</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="matricula" id="9883BDF1-B33A-E42E-B97D-1EC31135AE41">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>B8599C8B-0D0C-5CE8-A359-804CD44A7CEE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marca" id="0729A63C-0010-126B-4254-B4F0211E58B4">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>E59B79A3-7928-BC67-2CE3-94870DCAF76F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2B439F7F-550B-BC3D-D59F-C63923CD94E4" name="Coche_PK">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>B2A9F232-84EB-B7BE-FE2C-B25ED57EF147</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9883BDF1-B33A-E42E-B97D-1EC31135AE41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="D1B29FAE-76B0-2CF3-58E3-57700A0A686C" name="Albaran" seqName="seg_0"/>
+   <object objectType="Entity" objectID="DEB8F24F-BE19-DC38-E149-5CF07B9613A8" name="Centro" seqName="seg_0"/>
+   <object objectType="Entity" objectID="D450D19F-8981-86B0-9D2A-FF36E812A9B4" name="Coche" seqName="seg_0"/>
+   <object objectType="Entity" objectID="C13A9333-7960-6A15-FA63-7E6AF5A40A88" name="Login" seqName="seg_0"/>
+   <object objectType="Entity" objectID="C5DC3BE3-E3BB-5E4D-80EE-E10B79E54FB6" name="Parte" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E718DEDC-1C4F-E3E9-5BA2-A9D68F78FCDD" name="TipoParte" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4A3F7578-00C2-3904-8EB0-8D8DBC458DBA" name="TipoTrabajador" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4BF9BCB6-D766-6A70-B47B-A15450862FF4" name="Trabajador" seqName="seg_0"/>
+   <object objectType="Relation" objectID="7697C919-14A6-68F0-D70F-64F6AB0B9A8D" name="Albaran_Coche_FK" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FDEC32F4-B479-77C8-F9DB-F3B38D2F22E8" name="Albaran_Parte_FK" seqName="seg_0"/>
+   <object objectType="Relation" objectID="67999556-656B-1EED-7D01-CC448F2F2ED5" name="Parte_TipoParte_FK" seqName="seg_0"/>
+   <object objectType="Relation" objectID="68025FA8-5623-ADA0-360E-9C4D2D4DAF08" name="Parte_Trabajador_FK" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B9FA4463-EFB6-A77E-A976-D77BD90AE291" name="Relation_10" seqName="seg_0"/>
+   <object objectType="Relation" objectID="83127D22-F47C-B0C7-05E7-73B5970D3749" name="Trabajador_Centro_FK" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9C1DAC54-0D1C-34B4-5057-EEFBD7501B5D" name="Trabajador_TipoTrabajador_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

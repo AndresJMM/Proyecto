@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="30952B38-676B-CEAF-8926-211A3AB4BDD9" name="Albaran" seqName="seg_0"/>
+   <object objectType="Table" objectID="5D2007B4-3B0E-66CB-A4AC-275C94B75007" name="Centro" seqName="seg_0"/>
+   <object objectType="Table" objectID="455CEC02-113F-7F8A-20E4-01624BD3A948" name="Coche" seqName="seg_0"/>
+   <object objectType="Table" objectID="8EB0F145-3F2D-575B-C287-05E2B7AFFC10" name="Login" seqName="seg_0"/>
+   <object objectType="Table" objectID="18FEEF16-AD6A-FE8C-6A45-CE9B8F58CC21" name="Parte" seqName="seg_0"/>
+   <object objectType="Table" objectID="D8741F52-FA79-BF0E-5BDD-6C1CDE531895" name="TipoParte" seqName="seg_0"/>
+   <object objectType="Table" objectID="443EF70C-033E-7D9B-44E9-993F292E5891" name="TipoTrabajador" seqName="seg_0"/>
+   <object objectType="Table" objectID="EED9F064-D558-424E-A26F-69D0008186A1" name="Trabajador" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="BB4152CE-69B3-496D-3367-43AB69FB33A5" name="Albaran_Coche_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="8F39A225-E94E-0699-E3B2-5EC5C7FC9083" name="Albaran_Parte_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="5992E4F0-62EF-C470-42B1-C52097DFA218" name="Login_Trabajador_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="CC90E40C-7E3A-C36F-8B2B-1403FBD0800A" name="Parte_TipoParte_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="05905AB9-2C0E-08FF-A5F2-A826850A9DA0" name="Parte_Trabajador_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="0466A305-3F34-D9EF-2365-78EE58A6E828" name="Trabajador_Centro_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="98C301CC-3D59-B426-B47B-85E88FFB06D7" name="Trabajador_TipoTrabajador_FK" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>
