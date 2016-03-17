@@ -47,10 +47,10 @@ CREATE TABLE Trabajadores(
   CONSTRAINT pk_Trabajador_idTrabajador PRIMARY KEY (idTrabajador),
   CONSTRAINT fk_Trabajador_TipoTrabajador
     FOREIGN KEY (idTipo)
-    REFERENCES TipoTrabajador (idTipo),
+    REFERENCES TipoTrabajadores (idTipo),
   CONSTRAINT fk_Trabajador_Centro
     FOREIGN KEY (idCentro)
-    REFERENCES Centro (idCentro));
+    REFERENCES Centros (idCentro));
 
 DROP TABLE TipoPartes CASCADE CONSTRAINTS;
 
@@ -77,10 +77,10 @@ CREATE TABLE Partes(
   CONSTRAINT pk_Parte_idParte PRIMARY KEY (idParte),
   CONSTRAINT fk_Parte_Trabajador
     FOREIGN KEY (idTrabajador)
-    REFERENCES Trabajador (idTrabajador),
+    REFERENCES Trabajadores (idTrabajador),
   CONSTRAINT fk_Parte_TipoParte
     FOREIGN KEY (idTipoParte)
-    REFERENCES TipoParte (idTipoParte));
+    REFERENCES TipoPartes (idTipoParte));
 
 DROP TABLE Coches CASCADE CONSTRAINTS;
 
@@ -99,8 +99,8 @@ CREATE TABLE Albaranes(
   horaLlegada VARCHAR2(5) NOT NULL,
   CONSTRAINT fk_Albaran_Parte
     FOREIGN KEY (idParte)
-    REFERENCES Parte (idParte),
+    REFERENCES Partes (idParte),
   CONSTRAINT fk_Albaran_Coche
     FOREIGN KEY (matricula)
-    REFERENCES Coche (matricula),
+    REFERENCES Coches (matricula),
   CONSTRAINT pk_Alb_idAlbaran_idParte PRIMARY KEY (idAlbaran, idParte));
