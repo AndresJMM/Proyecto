@@ -1,6 +1,6 @@
 # PROYECTO by IBAI, ANDRÉS, ALEJANDRA & ALFONSO
 
-  A continuación se encuentran una serie de pasos que ayudaran a mejorar la movilidad por el repositorio:
+  A continuación se encuentran una serie de explicaciones que ayudaran a mejorar la movilidad por el repositorio:
     
     - Diagrama de Clases: En esta carpeta se encuentra el diagrama de clases, realizada con el software 'Visual Paradigm'. También se encuentra un pdf para poder visualizar dicho diagrama mucho más fácil.
     
