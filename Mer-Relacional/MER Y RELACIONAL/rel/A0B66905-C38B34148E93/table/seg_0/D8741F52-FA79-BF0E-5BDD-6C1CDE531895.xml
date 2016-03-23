@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D8741F52-FA79-BF0E-5BDD-6C1CDE531895" name="TipoParte">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>C0F3CD74-465F-1643-6424-7A86892B8E57</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTipoParte" id="28CAD0B0-BF7B-933C-64C8-69F30D4D4258">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>CC91E386-426A-D034-394F-B34B5A01D4A5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="F39C6366-5D2E-08A2-0319-C037EB683654">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>81CB9E39-B92F-363E-2936-9DC647805562</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>CEB1A108-FCF2-3D7F-745F-1360F4F7ED7B</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="519C6656-450D-E00B-0497-120C6D8FA240" name="TipoParte_PK">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>8BC0350C-3BD0-F1FC-3A57-8CFCA4C2CE85</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28CAD0B0-BF7B-933C-64C8-69F30D4D4258"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

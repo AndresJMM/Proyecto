@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DEB8F24F-BE19-DC38-E149-5CF07B9613A8" name="Centro">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>5D2007B4-3B0E-66CB-A4AC-275C94B75007</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idCentro" id="595D7439-1094-1D31-359B-221DC02DD32D">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>1FD9CA71-2DE9-3F20-E8F5-4026FF62D134</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+</Attribute>
+<Attribute name="nombre" id="C9F115AC-92A9-A80E-7292-BD9CE102204E">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>4B903E71-5AD0-2C55-78A8-649ADD7E78AE</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+</Attribute>
+<Attribute name="telefono" id="FB85CA9E-8383-FD53-B606-CCD6249D6EE2">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>04C03876-75B7-7245-5A86-B1D3E819FC0B</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+</Attribute>
+<Attribute name="calle" id="A1D58670-F01D-7953-6623-0DF4A89B6527">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>C8447AB6-7CAA-FCD9-7D2D-50BE52232A3B</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+</Attribute>
+<Attribute name="numero" id="87458432-1389-732D-C1F7-2B78188DEDFB">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>0C665A15-066F-1BAA-0352-DCB18E2C7B7A</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+</Attribute>
+<Attribute name="CP" id="654D901B-0B30-2336-84B7-F0244FFCE15E">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>3B42CDF7-7F62-846D-7C24-94CEF7A3C3AD</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+</Attribute>
+<Attribute name="ciudad" id="ED7F9115-360D-9ABB-E72C-B29883D03367">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>E54781C4-FA28-A3F2-A397-7871E285FB53</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+</Attribute>
+<Attribute name="provincia" id="F9145599-1FAC-7B9E-56E9-BF6AC7729A02">
+<createdBy>Cuervo</createdBy>
+<createdTime>2016-03-09 19:43:22 UTC</createdTime>
+<generatorID>1ECE9EA8-5B1C-E7F1-0267-B777937BD11A</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B19A9B11-A796-E8E2-73D8-4BF0AC6AC3F8" name="Centro PK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:58:09 UTC</createdTime>
+<generatorID>04D09BFC-2C60-6601-2F0B-1F8875116616</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>595D7439-1094-1D31-359B-221DC02DD32D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

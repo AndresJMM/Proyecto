@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30952B38-676B-CEAF-8926-211A3AB4BDD9" name="Albaran">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>C6BC098C-7F90-921D-CE05-AE9B5F04A019</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idAlbaran" id="15BD0477-7914-082D-8170-76135CC34CAE">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>E9ED6AD3-9C8E-31EF-4FFA-843370E80FE5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Coche_matricula" id="640C284E-5A64-D843-AF2F-9C9D7B8B754A">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:14 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
+<delegate>9883BDF1-B33A-E42E-B97D-1EC31135AE41</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB4152CE-69B3-496D-3367-43AB69FB33A5" referredColumn="9883BDF1-B33A-E42E-B97D-1EC31135AE41"/>
+</associations>
+</Column>
+<Column name="Parte_idParte" id="4EE3CD2A-A4B5-D78C-F52E-ABCC9D06119F">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<delegate>43DD960A-BDB6-D1A4-C48B-C2D68BEAE07F</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8F39A225-E94E-0699-E3B2-5EC5C7FC9083" referredColumn="43DD960A-BDB6-D1A4-C48B-C2D68BEAE07F"/>
+</associations>
+</Column>
+<Column name="horaSalida" id="C6D53C0D-6535-484E-1672-E9731558211B">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>B2C6D5C7-9A85-E45D-8A5F-9660C3D3CB52</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horaLlegada" id="6E7035AE-33FF-E4BF-C186-E789256622D0">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>B7E3E66D-72FE-6CCC-3289-2DB91EC8E703</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14F84084-D093-9A0C-669E-18F27F23B80E" name="Albaran_PK">
+<sourceDDLFile>SQL.sql</sourceDDLFile>
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:40:11 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<importedID>B0B35352-7376-89D7-ECB6-C3987A34B358</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15BD0477-7914-082D-8170-76135CC34CAE"/>
+<colUsage columnID="4EE3CD2A-A4B5-D78C-F52E-ABCC9D06119F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26815CA5-C371-A310-35E6-D66BD978A2A0" name="Albaran_Parte_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:08 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4EE3CD2A-A4B5-D78C-F52E-ABCC9D06119F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="840C0722-C0B9-9AF1-AF54-C6F7404D526E" name="Albaran_Coche_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-03-04 08:51:14 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>simple</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="640C284E-5A64-D843-AF2F-9C9D7B8B754A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
