@@ -1,22 +1,46 @@
-DROP TABLE TipoTrabajadores CASCADE CONSTRAINTS;
 
-CREATE TABLE TipoTrabajadores(
-  idTipo NUMBER(10),
-  tipo VARCHAR2(20) NOT NULL,
-  CONSTRAINT pk_TipoTrabajador_idTipo PRIMARY KEY (idTipo));
+
+DROP TABLE Albaranes CASCADE CONSTRAINTS;
+
+DROP TABLE Coches CASCADE CONSTRAINTS;
+
+DROP TABLE Partes CASCADE CONSTRAINTS;
+
+DROP TABLE TipoPartes CASCADE CONSTRAINTS;
+
+DROP TABLE Trabajadores CASCADE CONSTRAINTS;
 
 DROP TABLE Logins CASCADE CONSTRAINTS;
 
-CREATE TABLE Logins(
-  idLogin NUMBER (10),
-  usuario VARCHAR2(20) NOT NULL,
-  pass VARCHAR2(20) NOT NULL,
-  CONSTRAINT pk_Login_Usuario PRIMARY KEY (idLogin)); 
-  
+DROP TABLE TipoTrabajadores CASCADE CONSTRAINTS;
+
 DROP TABLE Centros CASCADE CONSTRAINTS;
 
+
+CREATE TABLE TipoTrabajadores(
+  idTipo NUMBER(10) 
+    GENERATED ALWAYS AS IDENTITY
+      NOORDER
+      NOCYCLE NOT NULL ENABLE,
+  tipo VARCHAR2(20) NOT NULL,
+  CONSTRAINT pk_TipoTrabajador_idTipo PRIMARY KEY (idTipo));
+
+
+CREATE TABLE Logins(
+  idLogin NUMBER (10) 
+    GENERATED ALWAYS AS IDENTITY
+      NOORDER
+      NOCYCLE NOT NULL ENABLE,
+  usuario VARCHAR2(20) NOT NULL,
+  pass VARCHAR2(20) NOT NULL,
+  CONSTRAINT pk_Login_Usuario PRIMARY KEY (idLogin));
+  
+
 CREATE TABLE Centros(
-  idCentro NUMBER(10),
+  idCentro NUMBER(10) 
+    GENERATED ALWAYS AS IDENTITY
+      NOORDER
+      NOCYCLE NOT NULL ENABLE,
   nombre VARCHAR2(45) NOT NULL,
   telefono VARCHAR2(9) NOT NULL,
   calle VARCHAR2(45) NOT NULL,
@@ -26,10 +50,12 @@ CREATE TABLE Centros(
   provincia VARCHAR2(45) NOT NULL,
   CONSTRAINT pk_Centro_idCentro PRIMARY KEY (idCentro));
 
-DROP TABLE Trabajadores CASCADE CONSTRAINTS;
 
 CREATE TABLE Trabajadores(
-  idTrabajador NUMBER(10),
+  idTrabajador NUMBER(10) 
+    GENERATED ALWAYS AS IDENTITY
+      NOORDER
+      NOCYCLE NOT NULL ENABLE,
   idTipo NUMBER(10) NOT NULL,
   idCentro NUMBER(10) NOT NULL,
   DNI VARCHAR2(9) NOT NULL,
@@ -52,17 +78,21 @@ CREATE TABLE Trabajadores(
     FOREIGN KEY (idCentro)
     REFERENCES Centros (idCentro));
 
-DROP TABLE TipoPartes CASCADE CONSTRAINTS;
 
 CREATE TABLE TipoPartes(
-  idTipoParte NUMBER(10),
+  idTipoParte NUMBER(10) 
+    GENERATED ALWAYS AS IDENTITY
+      NOORDER
+      NOCYCLE NOT NULL ENABLE,
   estado VARCHAR2(20) NOT NULL,
   CONSTRAINT pk_TipoParte_idTipoParte PRIMARY KEY (idTipoParte));
 
-DROP TABLE Partes CASCADE CONSTRAINTS;
 
 CREATE TABLE Partes(
-  idParte NUMBER(10),
+  idParte NUMBER(10) 
+    GENERATED ALWAYS AS IDENTITY
+      NOORDER
+      NOCYCLE NOT NULL ENABLE,
   idTrabajador NUMBER(10) NOT NULL,
   idTipoParte  NUMBER(10) NOT NULL,
   fecha DATE NOT NULL,
@@ -82,21 +112,19 @@ CREATE TABLE Partes(
     FOREIGN KEY (idTipoParte)
     REFERENCES TipoPartes (idTipoParte));
 
-DROP TABLE Coches CASCADE CONSTRAINTS;
 
 CREATE TABLE Coches(
   matricula VARCHAR2(7),
   marca VARCHAR2(45) NOT NULL,
   CONSTRAINT pk_Coche_Matricula PRIMARY KEY (matricula));
 
-DROP TABLE Albaranes CASCADE CONSTRAINTS;
 
 CREATE TABLE Albaranes(
-  idAlbaran NUMBER(10),
+  idAlbaran VARCHAR2(10),
   idParte NUMBER(10) NOT NULL,
   matricula VARCHAR2(7) NOT NULL,
-  horaSalida VARCHAR2(5) NOT NULL,
-  horaLlegada VARCHAR2(5) NOT NULL,
+  horaSalida TIMESTAMP NOT NULL,
+  horaLlegada TIMESTAMP NOT NULL,
   CONSTRAINT fk_Albaran_Parte
     FOREIGN KEY (idParte)
     REFERENCES Partes (idParte),
