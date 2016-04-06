@@ -27,6 +27,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DNI" id="13D7C77C-68A5-5F53-419D-4A6108774904">
 <createdBy>1gbd06</createdBy>
@@ -40,6 +41,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nombre" id="11EDBACC-4A47-BB01-4188-F81C7AA28C55">
 <createdBy>1gbd06</createdBy>
@@ -53,6 +55,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ape1" id="733ECBF1-F653-F1AF-CE33-9B0600118858">
 <createdBy>1gbd06</createdBy>
@@ -66,6 +69,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ape2" id="50E62A63-7C3E-2A37-5174-AFB90099E651">
 <createdBy>1gbd06</createdBy>
@@ -79,6 +83,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fechaNac" id="C505967D-7764-F80B-533B-81D1D4F763DE">
 <createdBy>1gbd06</createdBy>
@@ -92,6 +97,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="salario" id="567137AE-A759-497D-6B03-A6030CEBDE91">
 <createdBy>1gbd06</createdBy>
@@ -107,6 +113,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="movilEmp" id="0C6D9C0B-FE1F-7725-920F-9C8B3AE4BD32">
 <createdBy>Cuervo</createdBy>
@@ -120,6 +127,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="tlfPersonal" id="DDF6DD35-5950-6664-D88B-18D72C4975EA">
 <createdBy>Cuervo</createdBy>
@@ -134,6 +142,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="calle" id="11038C1D-1233-6089-1518-F41FFA063CD7">
 <createdBy>Cuervo</createdBy>
@@ -147,6 +156,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="portal" id="55F47D8C-4A8B-4CA9-068D-2361F6F003F1">
 <createdBy>Cuervo</createdBy>
@@ -160,6 +170,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="piso" id="3902BA3D-89BF-6E62-7C93-3903F1B2BABB">
 <createdBy>Cuervo</createdBy>
@@ -173,6 +184,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="mano" id="D7D7E679-11A1-8FFA-9B66-6D3E234DF49A">
 <createdBy>Cuervo</createdBy>
@@ -186,19 +198,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
-</Attribute>
-<Attribute name="TipoTrabajador idTipo" id="50672EDE-015B-F413-2D33-D597130BFF6B">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-03-04 08:58:09 UTC</createdTime>
-<generatorID>9C1DAC54-0D1C-34B4-5057-EEFBD7501B5D</generatorID>
-<ownerDesignName>simple</ownerDesignName>
-<engineerTo>
-<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
-</engineerTo>
-<referedAttribute>11D1377A-0E27-3907-8675-6D8CF1F24AFE</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Centro idCentro" id="E9F22E13-8D23-987C-BD16-39B77A1BF1D0">
 <createdBy>1gbd06</createdBy>
@@ -212,6 +212,7 @@
 <use>0</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

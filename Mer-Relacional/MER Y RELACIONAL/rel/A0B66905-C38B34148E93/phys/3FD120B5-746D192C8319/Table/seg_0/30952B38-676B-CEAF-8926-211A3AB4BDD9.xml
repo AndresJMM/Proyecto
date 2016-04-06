@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Albaran" directorySegmentName="seg_0" id="30952B38-676B-CEAF-8926-211A3AB4BDD9">
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Albaran" directorySegmentName="seg_0" id="30952B38-676B-CEAF-8926-211A3AB4BDD9">
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:40:11 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
@@ -18,12 +18,6 @@
 <ColumnProxy name="Parte_idParte" id="4EE3CD2A-A4B5-D78C-F52E-ABCC9D06119F">
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:51:08 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>simple</ownerDesignName>
-</ColumnProxy>
-<ColumnProxy name="Coche_matricula" id="640C284E-5A64-D843-AF2F-9C9D7B8B754A">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-03-04 08:51:14 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>simple</ownerDesignName>
 </ColumnProxy>
@@ -47,12 +41,6 @@
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>simple</ownerDesignName>
 </ForeignKey>
-<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Albaran_Coche_FK" id="840C0722-C0B9-9AF1-AF54-C6F7404D526E">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-03-04 08:51:14 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>simple</ownerDesignName>
-</ForeignKey>
 </foreignKeys>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Albaran_PK" id="14F84084-D093-9A0C-669E-18F27F23B80E">
@@ -63,4 +51,4 @@
 <indexSort>SORTED</indexSort>
 </PrimaryKey>
 </primaryKeys>
-</TableProxyOraclev11g>
+</TableProxyOraclev12c>

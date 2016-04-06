@@ -28,6 +28,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>7 CHAR</dataTypeSize>
+<ownDataTypeParameters>7 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="marca" id="1E4D87B4-C478-19DE-4FEC-38B62AD616CA">
 <createdBy>1gbd06</createdBy>
@@ -41,6 +42,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>45 CHAR</dataTypeSize>
+<ownDataTypeParameters>45 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idParte" id="2A5EECCF-0E3D-545A-C1CD-1B9598A7E1E2">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-04-06 10:55:42 UTC</createdTime>
+<generatorID>FC525F73-3B0E-8A82-8F28-5B37EDAC4F8C</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<referedAttribute>AFB8181D-7149-C997-BC3D-83CA7DD8CE4A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -56,6 +72,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>5E64ED4B-E1E1-2BAF-51BA-AC4AE2320C8C</attributeRef>
+<attributeRef>2A5EECCF-0E3D-545A-C1CD-1B9598A7E1E2</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

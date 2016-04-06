@@ -8,6 +8,7 @@
 <importedID>AE91CC61-D687-B02E-0ADB-87EF1B0FFD74</importedID>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
 <Column name="matricula" id="9883BDF1-B33A-E42E-B97D-1EC31135AE41">
 <sourceDDLFile>SQL.sql</sourceDDLFile>
@@ -20,6 +21,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>7 CHAR</dataTypeSize>
+<ownDataTypeParameters>7 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="marca" id="0729A63C-0010-126B-4254-B4F0211E58B4">
@@ -33,7 +35,23 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>45 CHAR</dataTypeSize>
+<ownDataTypeParameters>45 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Parte_idParte" id="DEE4C4D8-7B2C-4244-A0EE-28B5A4447CF4">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-04-06 10:57:24 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>AE51D126-A945-49F9-DF80-D5B6C96BC138</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E61E8490-A301-895D-230D-6884C404A2CC" referredColumn="43DD960A-BDB6-D1A4-C48B-C2D68BEAE07F"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -49,6 +67,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="9883BDF1-B33A-E42E-B97D-1EC31135AE41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B99666AE-4F0F-E1A2-02BC-5326E8A023DB" name="Coche_Parte_FK">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-04-06 10:57:24 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEE4C4D8-7B2C-4244-A0EE-28B5A4447CF4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
