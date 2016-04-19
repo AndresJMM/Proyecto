@@ -56,6 +56,7 @@ CREATE TABLE Trabajadores(
     GENERATED ALWAYS AS IDENTITY
       NOORDER
       NOCYCLE NOT NULL ENABLE,
+  idlogin NUMBER(10) NOT NULL, 
   idTipo NUMBER(10) NOT NULL,
   idCentro NUMBER(10) NOT NULL,
   DNI VARCHAR2(9) NOT NULL,
@@ -76,7 +77,11 @@ CREATE TABLE Trabajadores(
     REFERENCES TipoTrabajadores (idTipo),
   CONSTRAINT fk_Trabajador_Centro
     FOREIGN KEY (idCentro)
-    REFERENCES Centros (idCentro));
+    REFERENCES Centros (idCentro)
+  CONSTRAINT fk_Trabajador_Login
+    FOREIGN KEY(idLogin) 
+    REFERENCES Logins (idLogin)
+    ON DELETE CASCADE);
 
 
 CREATE TABLE TipoPartes(
