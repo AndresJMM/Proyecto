@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Parte" directorySegmentName="seg_0" id="18FEEF16-AD6A-FE8C-6A45-CE9B8F58CC21">
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Parte" directorySegmentName="seg_0" id="18FEEF16-AD6A-FE8C-6A45-CE9B8F58CC21">
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:40:11 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
@@ -9,7 +9,13 @@
 <accessDriverType>oracle_loader</accessDriverType>
 <rejectLimit></rejectLimit>
 <columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
-<ColumnProxy name="otrosGastos" id="1FEF5C79-5CBD-AC40-9A38-EBD65703B091">
+<ColumnProxy name="estado" id="17331AE7-B802-F73C-6B70-37B97915B94E">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-05-04 11:02:48 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="gastoOtros" id="1FEF5C79-5CBD-AC40-9A38-EBD65703B091">
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:40:11 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
@@ -81,12 +87,6 @@
 </ColumnProxy>
 </columnProxies>
 <foreignKeys>
-<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Parte_TipoParte_FK" id="C0D35D16-510B-F0F7-FC04-A749CE7CCCA1">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-03-04 08:50:58 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>simple</ownerDesignName>
-</ForeignKey>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Parte_Trabajador_FK" id="D7F9871F-385F-51C3-9FA0-C2AA14E7E654">
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:50:48 UTC</createdTime>
@@ -103,4 +103,4 @@
 <indexSort>SORTED</indexSort>
 </PrimaryKey>
 </primaryKeys>
-</TableProxyOraclev11g>
+</TableProxyOraclev12c>

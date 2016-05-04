@@ -6,8 +6,6 @@ DROP TABLE Coches CASCADE CONSTRAINTS;
 
 DROP TABLE Partes CASCADE CONSTRAINTS;
 
-DROP TABLE TipoPartes CASCADE CONSTRAINTS;
-
 DROP TABLE Trabajadores CASCADE CONSTRAINTS;
 
 DROP TABLE Logins CASCADE CONSTRAINTS;
@@ -84,25 +82,17 @@ CREATE TABLE Trabajadores(
     ON DELETE CASCADE);
 
 
-CREATE TABLE TipoPartes(
-  idTipoParte NUMBER(10) 
-    GENERATED ALWAYS AS IDENTITY
-      NOORDER
-      NOCYCLE NOT NULL ENABLE,
-  estado VARCHAR2(20) NOT NULL,
-  CONSTRAINT pk_TipoParte_idTipoParte PRIMARY KEY (idTipoParte));
-
-
 CREATE TABLE Partes(
   idParte NUMBER(10) 
     GENERATED ALWAYS AS IDENTITY
       NOORDER
       NOCYCLE NOT NULL ENABLE,
   idTrabajador NUMBER(10) NOT NULL,
-  idTipoParte  NUMBER(10) NOT NULL,
+  estado VARCHAR2(20) NOT NULL,
   fecha DATE NOT NULL,
   kmIni NUMBER(10,2) NOT NULL,
   kmFin NUMBER(10,2),
+  matricula VARCHAR2(7) NOT NULL,
   gastoPeaje NUMBER(5,2),
   gastoDieta NUMBER(5,2),
   gastoGasoil NUMBER(5,2),
@@ -113,9 +103,9 @@ CREATE TABLE Partes(
   CONSTRAINT fk_Parte_Trabajador
     FOREIGN KEY (idTrabajador)
     REFERENCES Trabajadores (idTrabajador),
-  CONSTRAINT fk_Parte_TipoParte
-    FOREIGN KEY (idTipoParte)
-    REFERENCES TipoPartes (idTipoParte));
+  CONSTRAINT fk_Parte_Coche
+    FOREIGN KEY (matricula)
+    REFERENCES Coches (matricula));
 
 
 CREATE TABLE Coches(
@@ -127,13 +117,9 @@ CREATE TABLE Coches(
 CREATE TABLE Albaranes(
   idAlbaran VARCHAR2(10),
   idParte NUMBER(10) NOT NULL,
-  matricula VARCHAR2(7) NOT NULL,
   horaSalida TIMESTAMP NOT NULL,
   horaLlegada TIMESTAMP NOT NULL,
   CONSTRAINT fk_Albaran_Parte
     FOREIGN KEY (idParte)
     REFERENCES Partes (idParte),
-  CONSTRAINT fk_Albaran_Coche
-    FOREIGN KEY (matricula)
-    REFERENCES Coches (matricula),
   CONSTRAINT pk_Alb_idAlbaran_idParte PRIMARY KEY (idAlbaran, idParte));

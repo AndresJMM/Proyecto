@@ -42,6 +42,20 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="estado" id="B3B94F54-71A5-E31A-C8C3-8EBC384BE361">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-05-04 11:01:54 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="kmIni" id="D22D8E6C-F946-A220-ED05-026BA4F929DB">
 <createdBy>1gbd06</createdBy>
 <createdTime>2016-03-04 08:58:09 UTC</createdTime>
@@ -50,6 +64,22 @@
 <engineerTo>
 <item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
 </engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kmFin" id="0FC4466A-42A3-5DB1-38BA-04451B55FC6F">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-05-04 11:00:36 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -162,6 +192,20 @@
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>A0DDC9F8-3526-F034-7C79-0E700441568E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTipoParte" id="7D421568-56C9-FD36-7BC8-2A20F7D4A70E">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-05-04 11:00:09 UTC</createdTime>
+<generatorID>67999556-656B-1EED-7D01-CC448F2F2ED5</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<engineerTo>
+<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
+</engineerTo>
+<referedAttribute>7DAA2C15-D8F2-AE5A-4D47-99F2ABA6E387</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

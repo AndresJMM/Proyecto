@@ -70,35 +70,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="matricula" id="D69BEDF2-480F-BFE3-69F4-895FAE7C967D">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-04-06 10:57:06 UTC</createdTime>
-<generatorID>7697C919-14A6-68F0-D70F-64F6AB0B9A8D</generatorID>
-<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
-<engineerTo>
-<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
-</engineerTo>
-<referedAttribute>5E64ED4B-E1E1-2BAF-51BA-AC4AE2320C8C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>7 CHAR</dataTypeSize>
-<ownDataTypeParameters>7 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="idParte1" id="A3CD4FA9-032C-E833-F5B5-C6FB3B03B0A6">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-04-06 10:57:06 UTC</createdTime>
-<generatorID>7697C919-14A6-68F0-D70F-64F6AB0B9A8D</generatorID>
-<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
-<engineerTo>
-<item key="A0B66905-0FAF-95CA-1DE6-C38B34148E93" value="true"/>
-</engineerTo>
-<referedAttribute>2A5EECCF-0E3D-545A-C1CD-1B9598A7E1E2</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="5ED95E1D-2478-F3D2-6BEB-177FF6CE4EAF" name="Albaran PK">

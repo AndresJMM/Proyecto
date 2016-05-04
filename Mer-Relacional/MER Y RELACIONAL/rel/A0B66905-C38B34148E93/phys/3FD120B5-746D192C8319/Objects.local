@@ -10,6 +10,5 @@
    <object objectType="Table" objectID="455CEC02-113F-7F8A-20E4-01624BD3A948" name="Coche" seqName="seg_0"/>
    <object objectType="Table" objectID="5D2007B4-3B0E-66CB-A4AC-275C94B75007" name="Centro" seqName="seg_0"/>
    <object objectType="Table" objectID="8EB0F145-3F2D-575B-C287-05E2B7AFFC10" name="Login" seqName="seg_0"/>
-   <object objectType="Table" objectID="D8741F52-FA79-BF0E-5BDD-6C1CDE531895" name="TipoParte" seqName="seg_0"/>
    <object objectType="Table" objectID="EED9F064-D558-424E-A26F-69D0008186A1" name="Trabajador" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.storage.oracle.v12c.StorageDesignOraclev12c>

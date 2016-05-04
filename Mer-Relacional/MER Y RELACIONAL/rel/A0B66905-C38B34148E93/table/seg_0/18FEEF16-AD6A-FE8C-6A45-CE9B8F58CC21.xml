@@ -36,9 +36,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="CC90E40C-7E3A-C36F-8B2B-1403FBD0800A" referredColumn="28CAD0B0-BF7B-933C-64C8-69F30D4D4258"/>
-</associations>
 </Column>
 <Column name="Trabajador_idTrabajador" id="B88474E8-4AD4-0A44-35BF-A46F404171AC">
 <createdBy>andrés</createdBy>
@@ -64,6 +61,18 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <domain>E9FB862B-DF0D-4BCA-1F2D-957493D4EA80</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="17331AE7-B802-F73C-6B70-37B97915B94E">
+<createdBy>1gbd06</createdBy>
+<createdTime>2016-05-04 11:02:48 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MER Y RELACIONAL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="kmIni" id="5AF59911-6F17-2EC1-A651-1319A36F1071">
@@ -210,17 +219,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="B88474E8-4AD4-0A44-35BF-A46F404171AC"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="C0D35D16-510B-F0F7-FC04-A749CE7CCCA1" name="Parte_TipoParte_FK">
-<createdBy>1gbd06</createdBy>
-<createdTime>2016-03-04 08:50:58 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>simple</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="452D1DCA-AB1C-440E-02DC-94D195A4D250"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
