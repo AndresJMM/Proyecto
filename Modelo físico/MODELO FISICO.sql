@@ -1,5 +1,3 @@
-
-
 DROP TABLE Albaranes CASCADE CONSTRAINTS;
 
 DROP TABLE Coches CASCADE CONSTRAINTS;
@@ -75,12 +73,16 @@ CREATE TABLE Trabajadores(
     REFERENCES TipoTrabajadores (idTipo),
   CONSTRAINT fk_Trabajador_Centro
     FOREIGN KEY (idCentro)
-    REFERENCES Centros (idCentro)
+    REFERENCES Centros (idCentro),
   CONSTRAINT fk_Trabajador_Login
     FOREIGN KEY(idLogin) 
     REFERENCES Logins (idLogin)
     ON DELETE CASCADE);
 
+CREATE TABLE Coches(
+  matricula VARCHAR2(7),
+  marca VARCHAR2(45) NOT NULL,
+  CONSTRAINT pk_Coche_Matricula PRIMARY KEY (matricula));
 
 CREATE TABLE Partes(
   idParte NUMBER(10) 
@@ -108,12 +110,6 @@ CREATE TABLE Partes(
     REFERENCES Coches (matricula));
 
 
-CREATE TABLE Coches(
-  matricula VARCHAR2(7),
-  marca VARCHAR2(45) NOT NULL,
-  CONSTRAINT pk_Coche_Matricula PRIMARY KEY (matricula));
-
-
 CREATE TABLE Albaranes(
   idAlbaran VARCHAR2(10),
   idParte NUMBER(10) NOT NULL,
@@ -122,4 +118,4 @@ CREATE TABLE Albaranes(
   CONSTRAINT fk_Albaran_Parte
     FOREIGN KEY (idParte)
     REFERENCES Partes (idParte),
-  CONSTRAINT pk_Alb_idAlbaran_idParte PRIMARY KEY (idAlbaran, idParte));
+  CONSTRAINT pk_Alb_idAlb_idParte PRIMARY KEY (idAlbaran, idParte));
