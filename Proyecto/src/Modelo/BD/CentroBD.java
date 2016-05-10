@@ -16,7 +16,7 @@ public class CentroBD {
         ArrayList<Integer> tCentros = new ArrayList();
         try{
             try (Statement stmt = conn.createStatement()) {
-                ResultSet rset = stmt.executeQuery("select idCentro from CENTRO");
+                ResultSet rset = stmt.executeQuery("select idCentro from CENTROS");
                 if(rset != null){
                     while (rset.next()){
                         tCentros.add(rset.getInt(1));
@@ -58,7 +58,7 @@ public class CentroBD {
     public static void alta(Centro c) throws SQLException{
         Connection conn = GenericoBD.startConn();
         
-        String plantilla = "INSERT INTO CENTRO (IDCENTRO, NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?,?)";
+        String plantilla = "INSERT INTO CENTROS (IDCENTRO, NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement ps = conn.prepareStatement(plantilla);
         ps.setInt(1,c.getIdCentro());
         ps.setString(2,c.getNombreCen());
@@ -77,7 +77,7 @@ public class CentroBD {
     }
     public static void modificar(Centro c) throws SQLException{
         Connection conn = GenericoBD.startConn();
-        String plantilla = "UPDATE CENTRO SET(NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?) WHERE IDCENTRO = ?";
+        String plantilla = "UPDATE CENTROS SET(NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?) WHERE IDCENTRO = ?";
         PreparedStatement ps=conn.prepareStatement(plantilla);
         ps.setString(1,c.getNombreCen());
         ps.setString(2,c.getTelefonoCen());

@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import oracle.jdbc.OracleTypes;
 
@@ -110,10 +109,53 @@ public class TrabajadorBD {
         return trabajadores;
     }
     
+    
+    public static Trabajador getTrabajadorPorUsuario(String usuario,String pass){
+        Connection conn = GenericoBD.startConn();
+        Trabajador t = null;
+        try{
+            CallableStatement cs = conn.prepareCall("{call PAC_TRABAJADOR.get_trabajador_usuario(?,?,?)}");
+            cs.registerOutParameter(3, OracleTypes.CURSOR);
+            cs.setString(1, usuario);
+            cs.setString(2, pass);
+            cs.execute();
+            ResultSet rs = (ResultSet)cs.getObject(3);
+            if(rs.next()==true){
+                if(rs.getString("TIPO").compareToIgnoreCase("Logistica")!=0)
+                    t = new Administracion();
+                else
+                    t = new Logistica();
+                t.setIdTrabajador(rs.getInt("IDTRABAJADOR"));
+                t.setDNI(rs.getString("DNI"));
+                t.setNombre(rs.getString("NOMBRE"));
+                t.setApe1(rs.getString("APE1"));
+                t.setApe2(rs.getString("APE2"));
+                t.setMovilEmp(rs.getString("MOVILEMP"));
+                t.setCalleTrab(rs.getString("CALLE"));
+                t.setPortalTrab(rs.getString("PORTAL"));
+                t.setPisoTrab(rs.getString("PISO"));
+                t.setManoTrab(rs.getString("MANO"));
+                if(rs.getDate("FECHANAC") != null)
+                    t.setFechaNac(rs.getDate("FECHANAC"));
+                if(rs.getBigDecimal("SALARIO") != null)
+                    t.setSalario(rs.getBigDecimal("SALARIO").floatValue());
+                if(rs.getString("TLFPERSONAL") != null)
+                    t.setTlfPersonal(rs.getString("TLFPERSONAL"));   
+            }
+        }
+        catch(Exception e){
+            System.out.println("Problemas al buscar usuario: "+e);
+        }
+        if(!GenericoBD.dropConn(conn)){
+            System.out.println("Problemas al cerrar");
+        }
+        return t;
+    }
+    
     public static void alta(Trabajador t, int idCentro, String tipo) throws SQLException{
         Connection conn = GenericoBD.startConn();
         
-        String plantilla = "INSERT INTO trabajador (idCentro, idTipo, DNI, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String plantilla = "INSERT INTO TRABAJADORES (idCentro, idTipo, DNI, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement sentenciaCon = conn.prepareStatement(plantilla);
         sentenciaCon.setInt(1,idCentro);
         if(tipo.compareToIgnoreCase("Logistica")==0)
@@ -132,15 +174,16 @@ public class TrabajadorBD {
             sentenciaCon.setFloat(8,t.getSalario());
         else   
             sentenciaCon.setString(8,null);
-        sentenciaCon.setString(9,t.getMovilEmp());
-        sentenciaCon.setString(10,t.getTlfPersonal());
-        sentenciaCon.setString(11,t.getCalleTrab());
-        sentenciaCon.setString(12,t.getPortalTrab());
-        sentenciaCon.setString(13,t.getPisoTrab());
-        sentenciaCon.setString(14,t.getManoTrab());
-        sentenciaCon.executeUpdate();
+            sentenciaCon.setString(9,t.getMovilEmp());
+            sentenciaCon.setString(10,t.getTlfPersonal());
+            sentenciaCon.setString(11,t.getCalleTrab());
+            sentenciaCon.setString(12,t.getPortalTrab());
+            sentenciaCon.setString(13,t.getPisoTrab());
+            sentenciaCon.setString(14,t.getManoTrab());
+            sentenciaCon.executeUpdate();
         try{
             conn.commit();
+            System.out.print("Llego");
         }catch(Exception e){
         }
             
@@ -152,7 +195,7 @@ public class TrabajadorBD {
     public static void modificacion (Trabajador t) throws SQLException{  
         Connection conn = GenericoBD.startConn();     
 
-        String plantilla = "update trabajador set  nombre = ?, ape1 = ?, ape2 = ?, fechaNac = ?, salario = ?, movilEmp = ?, tlfPersonal = ?, calle = ?, portal = ?, piso = ?, mano = ? where DNI= ? ";
+        String plantilla = "update TRABAJADORES set  nombre = ?, ape1 = ?, ape2 = ?, fechaNac = ?, salario = ?, movilEmp = ?, tlfPersonal = ?, calle = ?, portal = ?, piso = ?, mano = ? where DNI= ? ";
         PreparedStatement ps=conn.prepareStatement(plantilla);
         ps.setString(1,t.getNombre());
         ps.setString(2,t.getApe1());
@@ -180,7 +223,7 @@ public class TrabajadorBD {
     public static void modificacion (Trabajador t, String tipo) throws SQLException{  
         Connection conn = GenericoBD.startConn();     
 
-        String plantilla = "update trabajador set  nombre = ?, ape1 = ?, ape2 = ?, fechaNac = ?, salario = ?, movilEmp = ?, tlfPersonal = ?, calle = ?, portal = ?, piso = ?, mano = ? , idTipo = ? where DNI= ? ";
+        String plantilla = "update TRABAJADORES set  nombre = ?, ape1 = ?, ape2 = ?, fechaNac = ?, salario = ?, movilEmp = ?, tlfPersonal = ?, calle = ?, portal = ?, piso = ?, mano = ? , idTipo = ? where DNI= ? ";
         PreparedStatement ps=conn.prepareStatement(plantilla);
         ps.setString(1,t.getNombre());
         ps.setString(2,t.getApe1());
@@ -212,7 +255,7 @@ public class TrabajadorBD {
     public static void modificacion (Trabajador t, int idCentro) throws SQLException{  
         Connection conn = GenericoBD.startConn();     
 
-        String plantilla = "update trabajador set  nombre = ?, ape1 = ?, ape2 = ?, fechaNac = ?, salario = ?, movilEmp = ?, tlfPersonal = ?, calle = ?, portal = ?, piso = ?, mano = ?, idCentro = ?,  where DNI= ? ";
+        String plantilla = "update TRABAJADORES set  nombre = ?, ape1 = ?, ape2 = ?, fechaNac = ?, salario = ?, movilEmp = ?, tlfPersonal = ?, calle = ?, portal = ?, piso = ?, mano = ?, idCentro = ?,  where DNI= ? ";
         PreparedStatement ps=conn.prepareStatement(plantilla);
         ps.setString(1,t.getNombre());
         ps.setString(2,t.getApe1());
@@ -241,7 +284,7 @@ public class TrabajadorBD {
 
     public static void eliminar(Trabajador t) throws Exception {
         Connection conn = GenericoBD.startConn();
-        String plantilla = "delete from trabajador where DNI= ?";
+        String plantilla = "delete from TRABAJADORES where IDTRABAJADOR= ?";
         PreparedStatement sentenciaCon = conn.prepareStatement(plantilla);
         sentenciaCon.setInt(1,t.getIdTrabajador());
         sentenciaCon.executeUpdate();

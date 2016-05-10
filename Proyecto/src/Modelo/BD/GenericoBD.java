@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class GenericoBD {
+    
+    private static Connection  connection;
         
     public static Connection startConn(){
         try
@@ -28,8 +30,20 @@ public class GenericoBD {
             return false;
         }
     }
+    
+    public static void connect() throws Exception{
+        Class.forName("oracle.jdbc.OracleDriver");
+        String user = "daw06";
+        String pass = "daw06";
+        String url = "jdbc:oracle:thin:@SrvOracle:1521:orcl";
+        connection =   DriverManager.getConnection(url,user,pass);
+    }
+     
+    public static void disconnect() throws Exception{
+        connection.close();
+    }
 
-    static Object getCon() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static Connection getCon(){
+        return connection;
     }
 }

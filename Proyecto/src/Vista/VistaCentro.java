@@ -138,7 +138,7 @@ private int contador = 0;
     }//GEN-LAST:event_bAceptarActionPerformed
 
     private void bSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirActionPerformed
-        Main.acabar();
+        Main.close();
     }//GEN-LAST:event_bSalirActionPerformed
 
     private void cbIdCenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIdCenActionPerformed
@@ -160,7 +160,7 @@ private int contador = 0;
         if (contador == 2)
         {
             JOptionPane.showMessageDialog(this,"Su cuenta ha sido bloqueada.");
-            Main.acabar();
+            Main.close();
         }
         else
             contador = contador + 1;
