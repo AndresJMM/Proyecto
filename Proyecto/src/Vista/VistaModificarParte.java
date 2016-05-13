@@ -269,6 +269,7 @@ public class VistaModificarParte extends javax.swing.JFrame {
             validateAll();
             Main.modificarParte(cFecha.getCurrent(), cMatricula.getSelectedItem().toString(), Float.parseFloat(tfKmInicio.getText()), Float.parseFloat(tfKmFin.getText()), tfGastoPeaje.getText(), tfGastoDieta.getText(), tfGastoGasoil.getText(), tfOtrosGastos.getText(), taDescripcion.getText());
             JOptionPaneWithTimeOut.showDialog(this, "El parte ha sido modificado satisfactoriamente.", "AVISO", 1500);
+            bSalir.doClick(); 
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error: " + e);
