@@ -125,3 +125,26 @@ CREATE TABLE INFORMES(
   Fecha DATE,
   Contenido CLOB
 );
+
+insert into logins(usuario, pass) values ('usu1', 'usu1');
+insert into logins(usuario, pass) values ('usu2', 'usu2');
+insert into logins(usuario, pass) values ('usu3', 'usu3');
+insert into logins(usuario, pass) values ('usu4', 'usu4');
+insert into logins(usuario, pass) values ('admin', 'admin');
+
+insert into tipotrabajadores(tipo) values ('administracion');
+insert into tipotrabajadores(tipo) values ('logistica');
+
+insert into centros(nombre, telefono, calle, numero, cp, ciudad, provincia) values ('centro1', '111111111', 'calle1', '1', '01001', 'Vitoria', 'Alava');
+insert into centros(nombre, telefono, calle, numero, cp, ciudad, provincia) values ('centro2', '222222222', 'calle2', '2', '01002', 'San Sebastian', 'Guipuzcoa');
+
+insert into trabajadores(idLogin, idTipo, idCentro, dni, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) values (1, 1, 1, '11111111A', 'Ana', 'Jimenez', 'Jimenez', '01/01/91', 1000, '612345678', '945111111', 'Diaz de Olano', '1', '1', 'A');
+insert into trabajadores(idLogin, idTipo, idCentro, dni, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) values (2, 1, 1, '22222222B', 'Bea', 'Jimenez', 'Jimenez', '02/02/91', 1000, '612345678', '945111111', 'Diaz de Olano', '2', '2', 'B');
+insert into trabajadores(idLogin, idTipo, idCentro, dni, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) values (3, 2, 2, '33333333C', 'Cecilia', 'Jimenez', 'Jimenez', '03/03/91', 1000, '612345678', '945111111', 'Diaz de Olano', '3', '3', 'C');
+insert into trabajadores(idLogin, idTipo, idCentro, dni, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) values (4, 2, 2, '44444444D', 'Dina', 'Jimenez', 'Jimenez', '04/04/91', 1000, '612345678', '945111111', 'Diaz de Olano', '4', '4', 'D');
+insert into trabajadores(idLogin, idTipo, idCentro, dni, nombre, ape1, ape2, fechaNac, salario, movilEmp, tlfPersonal, calle, portal, piso, mano) values (5, 1, 1, '55555555D', 'Admin', 'Admin', 'Admin', '05/05/91', 1000, '612345678', '945111111', 'Admin', '1', '1', 'A');
+
+insert into coches values ('B1206WW', 'Seat');
+insert into coches values ('B1307LL', 'Opel');
+
+commit;
