@@ -2,24 +2,25 @@
 
   A continuación se encuentran una serie de explicaciones que ayudaran a mejorar la movilidad por el repositorio:
     
-    - Diagrama de Clases: En esta carpeta se encuentra el diagrama de clases, realizada con el software 'Visual Paradigm'. También se encuentra un pdf para poder visualizar dicho diagrama mucho más fácil.
+    - Diagrama de Clases: Realizada con el software 'Visual Paradigm'. También se encuentra un pdf para poder visualizar dicho diagrama mucho más fácil.
     
-    - Mer-Relacional: En esta carpeta se encuentran los modelos MER y Relacional, realizadas con el software 'Data Modeler', se encuentra un pdf de ambos para una mejor visualización y también se encuentra una carpeta llamada 'MER Y RELACIONAL' que contiene todos los archivos del 'Data Modeler' de dichos modelos, que son necesarios para abrir el archivo desde dicho programa.
+    - Mer-Relacional: Realizadas con el software 'Data Modeler', se encuentra un pdf de ambos para una mejor visualización y también se encuentra una carpeta llamada 'MER Y RELACIONAL' que contiene todos los archivos del 'Data Modeler' de dichos modelos, que son necesarios para abrir el archivo desde dicho programa.
     
-    - Modelo Físico: En esta carpeta se encuentra el archivo que representa el modelo físico del proyecto (creaciones de las tablas y de las constraints). Dicho archivo es un .sql con el que se puede visualizar comodamente con el 'Bloc de Notas' o 'Notepad++'. Finalmente, para el uso de dicho modelo físico se ha usado nuestra base de datos, utilizando el software 'Oracle SQL Developer'.
+    - Modelo Físico: Representa el modelo físico del proyecto (creaciones de las tablas y de las constraints). Dicho archivo es un .sql con el que se puede visualizar comodamente con el 'Bloc de Notas' o 'Notepad++'. Finalmente, para el uso de dicho modelo físico se ha usado nuestra base de datos, utilizando el software 'Oracle SQL Developer'.
     
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     
   A continuación, se encuentran una serie de pasos/instrucciones para que ayuden a poder moverse por todo el programa, entre sus diversas clases y paquetes:
 
     1.- Para empezar, para poder efectuar nuestro proyecto se necesitan instalar los siguientes programas: Netbeans IDE (programación), Visual Paradigm (diagrama de clases), Data Modeler (modelos MER y relacional) y Oracle SQL Developer (base de datos).
-    2.- Seguidamente, debemos llevar un orden para visualizar y entender el proyecto en sí. Primeramente, debemos mirar el diagrama de clases de nuestras tablas con sus respectivas relaciones y atributos. Después, debemos pasarnos por el Data Modeler para contemplar nuestros modelos MER y Relacional. Tras esto, observar el modelo físico para poder descubrir las diferentes contraints de cada tabla, los tipos de atributos o las claves foráneas, entre otras cosas. Tras esto, debemos mirar también los paquetes con los diferentes procedimientos llamados desde java y que actuan directamente en la base de datos, como también el trigger o disparador. Finalmente, debemos hacer varias sentencias insert (recogidas en el archivo dado) en nuestra base de datos Oracle para que nuestro proyecto pueda ejecutarse sin ningún tipo de contratiempo. Ahora, ya podemos adentrarnos en nuestro proyecto en java.
+    2.- Seguidamente, debemos llevar un orden para visualizar y entender el proyecto en sí. Primeramente, debemos mirar el diagrama de clases de nuestras tablas con sus respectivas relaciones y atributos. Después, debemos pasarnos por el Data Modeler para contemplar nuestros modelos MER y Relacional. Tras esto, observar el modelo físico para poder descubrir las diferentes contraints de cada tabla, los tipos de atributos o las claves foráneas, entre otras cosas. Tras esto, debemos mirar también los paquetes con los diferentes procedimientos llamados desde java y que actuan directamente en la base de datos, como también el trigger o disparador. Finalmente, debemos hacer varias sentencias insert (recogidas en el modelo físico) en nuestra base de datos Oracle para que nuestro proyecto pueda ejecutarse sin ningún tipo de contratiempo. Ahora, ya podemos adentrarnos en nuestro proyecto en java.
     3.- Dentro de nuestro proyecto en Netbeans, tenemos diversos paquetes que albergan sus clases correspondientes:
       · Controladora, recogiendo el Main.     
       · Vista, recogiendo todas las ventanas o paneles.
       · Modelo UML, recogiendo las clases necesarias pertenecientes a la base de datos con sus atributos, getters y setters y constructores.
       · Modelo BD, recogiendo las clases que realizan las funciones que se solicitan a la base de datos.
       · Excepciones, recogiendo los procesos que agrupan los errores en códigos java.
+      · 3 Paquetes de Informe (UML, Controlador y Vista).
     4.- Al ejecutar, nuestro programa comenzará en la ventana 'Login', donde debemos entrar con el usuario y contraseña del administrador. De esta, pasamos a la ventana 'Menu' donde podemos movernos entre diferentes menus presentes en el.
       ** Para entrar en nuestro programa como un usuario de logística, debemos crear un trabajador de logística. Esto es importante ya que el menu de 'Parte' es diferente dependiendo de si el trabajador es administrador o logística. ** 
     5.- Si cliqueamos el menu de trabajador, nos lleva a la ventana 'Trabajador' donde podremos crear/modificar/borrar diferentes trabajadores. Podremos asignarles un tipo de trabajador (Administrador o Logística), un usuario y contraseña o un centro de trabajo, entre otras cosas.
