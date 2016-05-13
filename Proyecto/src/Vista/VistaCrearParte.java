@@ -1,22 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vista;
-import Vista.VistaParteAdmin;
-import java.util.Calendar;
-import java.util.Date;
+
+import Controladora.Main;
+import Excepciones.*;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
- * @author andrés
+ * @author Alejandra Oteiza
  */
 public class VistaCrearParte extends javax.swing.JFrame {
 
-private VistaParteAdmin vpa;
-        
+    /**
+     * Creates new form VistaAlbaran
+     */
     public VistaCrearParte() {
         initComponents();
+        setLocationRelativeTo(null);
+        llenarCombo();
     }
 
     /**
@@ -28,91 +30,178 @@ private VistaParteAdmin vpa;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tfFecha = new javax.swing.JTextField();
-        tfMatricula = new javax.swing.JTextField();
-        tfKmIni = new javax.swing.JTextField();
-        tfKmFin = new javax.swing.JTextField();
-        tfGastoPeaje = new javax.swing.JTextField();
-        tfGastoGasol = new javax.swing.JTextField();
-        tfGastoDieta = new javax.swing.JTextField();
-        tfGastoOtros = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        taDesc = new javax.swing.JTextArea();
+        tfKmInicio = new javax.swing.JTextField();
+        bGuardar = new javax.swing.JButton();
+        bSalir = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        cFecha = new datechooser.beans.DateChooserCombo();
+        cMatricula = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        taDesc.setColumns(20);
-        taDesc.setRows(5);
-        jScrollPane1.setViewportView(taDesc);
+        bGuardar.setText("Guardar");
+        bGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGuardarActionPerformed(evt);
+            }
+        });
+
+        bSalir.setText("Salir");
+        bSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSalirActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel13.setText("*");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel14.setText("*");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("CREAR PARTE");
+
+        jLabel5.setText("KILÓMETRO INICIO:");
+
+        jLabel4.setText("MATRÍCULA:");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel15.setText("*");
+
+        jLabel3.setText("FECHA:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tfGastoOtros, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(tfGastoDieta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                    .addComponent(tfFecha)
-                    .addComponent(tfMatricula)
-                    .addComponent(tfKmIni)
-                    .addComponent(tfKmFin)
-                    .addComponent(tfGastoPeaje)
-                    .addComponent(tfGastoGasol))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5)))
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfKmInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(150, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bGuardar)
+                .addGap(30, 30, 30)
+                .addComponent(bSalir)
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(tfFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel13))
+                    .addComponent(cFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(tfMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel14)
+                    .addComponent(cMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tfKmIni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tfKmFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tfGastoPeaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfGastoGasol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfGastoDieta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfGastoOtros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfKmInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel15))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bGuardar)
+                    .addComponent(bSalir))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    private void llenarCombo(){
+        try{
+            ArrayList<String> matriculas = Main.getMatriculas();
+            
+            for(int x = 0; x < matriculas.size();x++){
+                cMatricula.insertItemAt(matriculas.get(x), x);
+            }
+        }
+        catch(Exception e)
+        {
+            javax.swing.JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }
+    
+    private void bSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirActionPerformed
+        //System.exit(0);
+        Main.cerrarModPart();
+        this.dispose();
+    }//GEN-LAST:event_bSalirActionPerformed
 
+    private void bGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGuardarActionPerformed
+        try{
+            validateAll();
+
+            Main.addParte(cFecha.getCurrent(), cMatricula.getSelectedItem().toString(), Float.parseFloat(tfKmInicio.getText()));
+            JOptionPaneWithTimeOut.showDialog(this, "El parte ha sido creado satisfactoriamente.", "AVISO", 1500);
+            Main.cerrarModPart();
+            bSalir.doClick();
+        }
+        catch(DateNoSelected e){
+            JOptionPaneWithTimeOut.showDialog(this, "La fecha es un dato obligatorio.\n Por favor, seleccione una fecha.", "AVISO", 1500);
+        } catch (Exception e) {
+            Logger.getLogger(VistaCrearParte.class.getName()).log(Level.SEVERE, null, e);
+        }        
+    }//GEN-LAST:event_bGuardarActionPerformed
     
-public void rellenarVCP(Date fecha,int gastodieta,int gastogasolina,int gastootros,int gastopeaje,int kmfin,int kmini,String matricula,String descripcion){  
-    if(fecha!=null){
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(fecha);
-        dateChooserCombo1.setSelectedDate(cal);}   
-    
-    tfGastoDieta.setText(String.valueOf(gastodieta));
-    tfGastoGasol.setText(String.valueOf(gastogasolina));
-    tfGastoOtros.setText(String.valueOf(gastootros));
-    tfGastoPeaje.setText(String.valueOf(gastopeaje));
-    tfKmFin.setText(String.valueOf(kmfin));
-    tfKmIni.setText(String.valueOf(kmini));
-    tfMatricula.setText(matricula);
-    taDesc.setText(descripcion);         
-}   
+    private void validateAll() throws Exception{
+        validateDate();
+        validateNumPlate();
+        validateKmBegin();
+        
+    }
     
     
+    private void validateDate() throws Exception{
+        
+    }
     
+    private void validateNumPlate() throws Exception{
+        
+    }
+    
+    private void validateKmBegin() throws Exception{
+        
+    }
     
     
     
@@ -142,8 +231,6 @@ public void rellenarVCP(Date fecha,int gastodieta,int gastogasolina,int gastootr
             java.util.logging.Logger.getLogger(VistaCrearParte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -153,15 +240,17 @@ public void rellenarVCP(Date fecha,int gastodieta,int gastogasolina,int gastootr
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea taDesc;
-    private javax.swing.JTextField tfFecha;
-    private javax.swing.JTextField tfGastoDieta;
-    private javax.swing.JTextField tfGastoGasol;
-    private javax.swing.JTextField tfGastoOtros;
-    private javax.swing.JTextField tfGastoPeaje;
-    private javax.swing.JTextField tfKmFin;
-    private javax.swing.JTextField tfKmIni;
-    private javax.swing.JTextField tfMatricula;
+    private javax.swing.JButton bGuardar;
+    private javax.swing.JButton bSalir;
+    private datechooser.beans.DateChooserCombo cFecha;
+    private javax.swing.JComboBox<String> cMatricula;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField tfKmInicio;
     // End of variables declaration//GEN-END:variables
 }

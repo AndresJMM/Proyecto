@@ -12,6 +12,8 @@ DROP TABLE TipoTrabajadores CASCADE CONSTRAINTS;
 
 DROP TABLE Centros CASCADE CONSTRAINTS;
 
+DROP TABLE INFORMES CASCADE CONSTRAINTS;
+
 
 CREATE TABLE TipoTrabajadores(
   idTipo NUMBER(10) 
@@ -98,7 +100,6 @@ CREATE TABLE Partes(
   gastoPeaje NUMBER(5,2),
   gastoDieta NUMBER(5,2),
   gastoGasoil NUMBER(5,2),
-  gastoAutopista NUMBER(5,2),
   gastoOtros NUMBER(5,2),
   descripcion VARCHAR2(250),
   CONSTRAINT pk_Parte_idParte PRIMARY KEY (idParte),
@@ -119,3 +120,8 @@ CREATE TABLE Albaranes(
     FOREIGN KEY (idParte)
     REFERENCES Partes (idParte),
   CONSTRAINT pk_Alb_idAlb_idParte PRIMARY KEY (idAlbaran, idParte));
+
+CREATE TABLE INFORMES( 
+  Fecha DATE,
+  Contenido CLOB
+);

@@ -1,9 +1,8 @@
 package Vista;
 
-import excepciones.*;
+import Excepciones.*;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
@@ -124,7 +123,7 @@ public class Panel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
-       VenAlbara.dropRow(this);
+       VistaAlbaran.dropRow(this);
     }//GEN-LAST:event_bBorrarActionPerformed
 
     private void tfNumAlbaranFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfNumAlbaranFocusLost

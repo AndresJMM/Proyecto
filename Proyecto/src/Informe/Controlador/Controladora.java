@@ -19,8 +19,6 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -31,7 +29,6 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
-import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
     
@@ -40,7 +37,6 @@ public class Controladora extends DefaultHandler{
     private Document dom;
     private ArrayList<Parte> informeAr;
     private String mes;
-    private String tempVal;
     private Element rootEle;
 
     public Controladora(String mes) {
@@ -79,7 +75,7 @@ public class Controladora extends DefaultHandler{
             dom = db.newDocument();
 
         } catch (ParserConfigurationException pce) {
-            System.out.println("Error while trying to instantiate DocumentBuilder " + pce);
+            
             System.exit(1);
         }
 
@@ -211,7 +207,7 @@ public class Controladora extends DefaultHandler{
                 OutputFormat format = new OutputFormat(dom);
                 format.setIndenting(true);
 
-                XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File("../informe-"+mes+".xml")), format);
+                XMLSerializer serializer = new XMLSerializer(new FileOutputStream(new File("./informes/informe-"+mes+".xml")), format);
 
                 serializer.serialize(dom);
 
@@ -234,14 +230,14 @@ public class Controladora extends DefaultHandler{
         if(!informeAr.isEmpty()){
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = dbFactory.newDocumentBuilder();
-            Document xmlDom = docBuilder.parse(new File("../informe-"+mes+".xml"));
+            Document xmlDom = docBuilder.parse(new File("./informes/informe-"+mes+".xml"));
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer transformer = tf.newTransformer();
             transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
             StringWriter writer = new StringWriter();
             transformer.transform(new DOMSource(xmlDom), new StreamResult(writer));
             String output = writer.getBuffer().toString();
-            System.out.print(mes);
+            
             Informe.BD.InformeBD.almacenarInforme(mes, output);
         }
     }

@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import centros.trabajadores.Main;
+import Controladora.Main;
 
 /**
  *
@@ -34,11 +34,7 @@ public class VistaMenu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         mTrabajador = new javax.swing.JMenu();
-        mCentro = new javax.swing.JMenu();
         mParte = new javax.swing.JMenu();
-        miAdmin = new javax.swing.JMenuItem();
-        miLogis = new javax.swing.JMenuItem();
-        mAlbaran = new javax.swing.JMenu();
         mInforme = new javax.swing.JMenu();
         mSalir = new javax.swing.JMenu();
 
@@ -48,6 +44,8 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
+        jMenuBar1.setBackground(new java.awt.Color(255, 204, 204));
+
         mTrabajador.setText("Trabajador");
         mTrabajador.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -56,26 +54,13 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         jMenuBar1.add(mTrabajador);
 
-        mCentro.setText("Centro");
-        mCentro.addMouseListener(new java.awt.event.MouseAdapter() {
+        mParte.setText("Partes");
+        mParte.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                mCentroMouseClicked(evt);
+                mParteMouseClicked(evt);
             }
         });
-        jMenuBar1.add(mCentro);
-
-        mParte.setText("Partes");
-
-        miAdmin.setText("Administrador");
-        mParte.add(miAdmin);
-
-        miLogis.setText("Logistica");
-        mParte.add(miLogis);
-
         jMenuBar1.add(mParte);
-
-        mAlbaran.setText("Albaranes");
-        jMenuBar1.add(mAlbaran);
 
         mInforme.setText("Informe");
         mInforme.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,7 +84,7 @@ public class VistaMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGap(0, 365, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,21 +95,31 @@ public class VistaMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mInformeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mInformeMouseClicked
-        Main.abrirInforme();
+        if(Main.isAdmin())
+            Main.abrirInforme();
     }//GEN-LAST:event_mInformeMouseClicked
 
     private void mTrabajadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mTrabajadorMouseClicked
         Main.irVT();
     }//GEN-LAST:event_mTrabajadorMouseClicked
 
-    private void mCentroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mCentroMouseClicked
-        Main.irVC();
-    }//GEN-LAST:event_mCentroMouseClicked
-
     private void mSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mSalirMouseClicked
         Main.volverALogin(this);
     }//GEN-LAST:event_mSalirMouseClicked
 
+    private void mParteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mParteMouseClicked
+        if(Main.isAdmin())
+            Main.irVPA();
+        else
+            Main.irVPL();
+    }//GEN-LAST:event_mParteMouseClicked
+
+    public void mostrar(boolean b){
+        getContentPane().setBackground(java.awt.Color.decode("#1AA86F2"));
+        mInforme.setEnabled(Main.isAdmin());
+        setVisible(b);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -165,13 +160,9 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenu mAlbaran;
-    private javax.swing.JMenu mCentro;
     private javax.swing.JMenu mInforme;
     private javax.swing.JMenu mParte;
     private javax.swing.JMenu mSalir;
     private javax.swing.JMenu mTrabajador;
-    private javax.swing.JMenuItem miAdmin;
-    private javax.swing.JMenuItem miLogis;
     // End of variables declaration//GEN-END:variables
 }

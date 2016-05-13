@@ -8,29 +8,24 @@ package Modelo.UML;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ *
+ * @author Alejandra Oteiza
+ */
 public class Parte {
     private int idParte;
-    private Date fecha;
     private String estado;
-    private String matricula;
-    private int kmIni;
-    private int kmFin;
-    private int gastoPeaje;
-    private int gastoGasolina;
-    private int gastoDieta;
-    private int gastoOtros;
+    private Date fecha;
+    private float kmIni;
+    private float kmFin;
+    private Coche coche;
+    private float gastoPeaje;
+    private float gastoDieta;
+    private float gastoGasoil;
+    private float gastoOtros;
     private String descripcion;
-    private ArrayList <Albaran> albaranes;
     
-    public Parte() {
-    }
-    
-    public Parte(int idParte, Date fecha, String estado, int kmIni) {
-        this.idParte = idParte;
-        this.fecha = fecha;
-        this.estado = estado;
-        this.kmIni = kmIni;
-    }
+    private ArrayList<Albaran> albaranes;
 
     public int getIdParte() {
         return idParte;
@@ -38,6 +33,14 @@ public class Parte {
 
     public void setIdParte(int idParte) {
         this.idParte = idParte;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public Date getFecha() {
@@ -48,51 +51,60 @@ public class Parte {
         this.fecha = fecha;
     }
 
-    public int getKmIni() {
+    public float getKmIni() {
         return kmIni;
     }
 
-    public void setKmIni(int kmIni) {
+    public void setKmIni(float kmIni) {
         this.kmIni = kmIni;
     }
 
-    public int getKmFin() {
+    public float getKmFin() {
         return kmFin;
     }
 
-    public void setKmFin(int kmFin) {
+    public void setKmFin(float kmFin) {
         this.kmFin = kmFin;
     }
 
-    public int getGastoPeaje() {
+    public String getMatricula() {
+        return this.coche.getMatricula();
+    }
+
+    public void setMatricula(String matricula) {
+        this.coche = new Coche();
+        this.coche.setMatricula(matricula);
+    }
+
+    public float getGastoPeaje() {
         return gastoPeaje;
     }
 
-    public void setGastoPeaje(int gastoPeaje) {
+    public void setGastoPeaje(float gastoPeaje) {
         this.gastoPeaje = gastoPeaje;
     }
 
-    public int getGastoGasolina() {
-        return gastoGasolina;
-    }
-
-    public void setGastoGasolina(int gastoGasolina) {
-        this.gastoGasolina = gastoGasolina;
-    }
-
-    public int getGastoDieta() {
+    public float getGastoDieta() {
         return gastoDieta;
     }
 
-    public void setGastoDieta(int gastoDieta) {
+    public void setGastoDieta(float gastoDieta) {
         this.gastoDieta = gastoDieta;
     }
 
-    public int getGastoOtros() {
+    public float getGastoGasoil() {
+        return gastoGasoil;
+    }
+
+    public void setGastoGasoil(float gastoGasoil) {
+        this.gastoGasoil = gastoGasoil;
+    }
+
+    public float getGastoOtros() {
         return gastoOtros;
     }
 
-    public void setGastoOtros(int gastoOtros) {
+    public void setGastoOtros(float gastoOtros) {
         this.gastoOtros = gastoOtros;
     }
 
@@ -111,20 +123,23 @@ public class Parte {
     public void setAlbaranes(ArrayList<Albaran> albaranes) {
         this.albaranes = albaranes;
     }
-    
-    public String getEstado(){
-        return estado;
-    }
-    
-    public void setEstado(String estado){
-        this.estado = estado;
-    }
-    
-    public String getMatricula() {
-        return matricula;
+
+    public Parte() {
+        albaranes = new ArrayList();
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+    public Parte(int idParte, String estado, Date fecha, float kmIni, float kmFin, String matricula, float gastoPeaje, float gastoDieta, float gastoGasoil, float gastoAutopista, float gastoOtros, String descripcion) {
+        this.idParte = idParte;
+        this.estado = estado;
+        this.fecha = fecha;
+        this.kmIni = kmIni;
+        this.kmFin = kmFin;
+        this.coche.setMatricula(matricula);
+        this.gastoPeaje = gastoPeaje;
+        this.gastoDieta = gastoDieta;
+        this.gastoGasoil = gastoGasoil;
+        this.gastoOtros = gastoOtros;
+        this.descripcion = descripcion;
+        albaranes = new ArrayList();
     }
 }

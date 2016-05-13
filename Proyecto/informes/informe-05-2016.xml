@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Partes>
+    <parte>
+        <idParte>12</idParte>
+        <idTrabajador>3</idTrabajador>
+        <estado>VALIDADO</estado>
+        <fecha>2016-05-11</fecha>
+        <kmIni>1.0</kmIni>
+        <kmFin>1.0</kmFin>
+        <gastos>
+            <peaje>1.0</peaje>
+            <dieta>1.0</dieta>
+            <gasoil>1.0</gasoil>
+            <otro>1.0</otro>
+        </gastos>
+        <matricula>B1206WW</matricula>
+    </parte>
+    <parte>
+        <idParte>13</idParte>
+        <idTrabajador>3</idTrabajador>
+        <estado>VALIDADO</estado>
+        <fecha>2016-05-11</fecha>
+        <kmIni>1.0</kmIni>
+        <kmFin>2.0</kmFin>
+        <gastos>
+            <peaje>3.0</peaje>
+            <dieta>4.0</dieta>
+            <gasoil>6.0</gasoil>
+            <otro>6.0</otro>
+        </gastos>
+        <matricula>B1206WW</matricula>
+    </parte>
+</Partes>

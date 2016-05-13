@@ -1,18 +1,21 @@
 package Vista;
 
-import centros.trabajadores.Main;
+import Controladora.Main;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
 
 public class VistaTrabajador extends javax.swing.JFrame {
     
     public VistaTrabajador() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(java.awt.Color.decode("#1BD6B8"));
         setListaCentros();
     }
 
@@ -73,6 +76,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("DATOS DEL TRABAJADOR");
 
+        jPanel1.setBackground(new java.awt.Color(27, 200, 253));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel5.setText("SEGUNDO APELLIDO");
@@ -152,6 +156,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
+        jPanel2.setBackground(new java.awt.Color(27, 200, 253));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "TIPO"));
 
         bgTipoTra.add(rbAdministracion);
@@ -183,6 +188,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(27, 200, 253));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "DIRECCION"));
 
         jLabel6.setText("CALLE");
@@ -245,6 +251,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel4.setBackground(new java.awt.Color(27, 200, 253));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "TELEFONOS"));
 
         jLabel10.setText("PERSONAL");
@@ -278,6 +285,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel5.setBackground(new java.awt.Color(27, 200, 253));
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel12.setText("SALARIO");
@@ -286,7 +294,6 @@ public class VistaTrabajador extends javax.swing.JFrame {
 
         jLabel13.setText("FECHA DE NACIMIENTO");
 
-        dateChooserCombo1.setFormat(2);
         dateChooserCombo1.setEnabled(false);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -347,6 +354,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
             }
         });
 
+        jPanel6.setBackground(new java.awt.Color(27, 200, 253));
         jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         cbIdCentro.addActionListener(new java.awt.event.ActionListener() {
@@ -398,6 +406,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
+        jPanel7.setBackground(new java.awt.Color(27, 200, 253));
         jPanel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel16.setText("USUARIO");
@@ -445,14 +454,9 @@ public class VistaTrabajador extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(53, 53, 53)
-                                        .addComponent(jLabel1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(73, 73, 73)
                                 .addComponent(bAceptar)
@@ -466,22 +470,25 @@ public class VistaTrabajador extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(112, 112, 112))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -519,8 +526,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_bSalirActionPerformed
     private void bAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAceptarActionPerformed
-        if(Main.validar(ftfDNI.getText(),tfNombre.getText(),tfApe1.getText(),tfApe2.getText(),tfCalle.getText(),tfPortal.getText()
-                ,tfPiso.getText(),tfMano.getText(),tfTelfMovil.getText(),tfTelfPersonal.getText(),tfSalario.getText())){
+        if(validar()){
             if(Main.modificar()){
                 try {
                     String tipo;
@@ -531,22 +537,27 @@ public class VistaTrabajador extends javax.swing.JFrame {
                     Date fecha = null;
                     if(dateChooserCombo1.getSelectedDate()!=null)
                         fecha = dateChooserCombo1.getSelectedDate().getTime();
-                    Main.actualizarUsuario(tfNombre.getText(),tfApe1.getText(),tfApe2.getText(),tfCalle.getText(),tfPortal.getText(),tfPiso.getText(),tfMano.getText(),tfTelfPersonal.getText(),tfTelfMovil.getText(),tfSalario.getText(),fecha, tipo);
+                    String pass = "";
+                    for(char a : passField.getPassword())
+                        pass+=a;
+                    Main.actualizarUsuario(tfNombre.getText(),tfApe1.getText(),tfApe2.getText(),tfCalle.getText(),tfPortal.getText(),tfPiso.getText(),tfMano.getText(),tfTelfPersonal.getText(),tfTelfMovil.getText(),tfSalario.getText(),fecha, tipo, Integer.parseInt(cbIdCentro.getSelectedItem().toString()), tfUsuario.getText(), pass);
                 } catch (SQLException ex) {
                     Logger.getLogger(VistaTrabajador.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }else{
+                String tipo;
+                if(rbAdministracion.isSelected())
+                    tipo = "Administracion";
+                else
+                    tipo = "Logistica";
+                Date fecha = null;
+                if(dateChooserCombo1.getSelectedDate()!=null)
+                    fecha = dateChooserCombo1.getSelectedDate().getTime();
+                String pass = "";
+                for(char a : passField.getPassword())
+                    pass+=a;
                 try {
-                    String tipo;
-                    if(rbAdministracion.isSelected())
-                        tipo = "Administracion";
-                    else
-                        tipo = "Logistica";  
-
-                    Date fecha = null;
-                    if(dateChooserCombo1.getSelectedDate()!=null)
-                        fecha = dateChooserCombo1.getSelectedDate().getTime();
-                    Main.crearUsuario(ftfDNI.getText(),tfNombre.getText(),tfApe1.getText(),tfApe2.getText(),tfCalle.getText(),tfPortal.getText(),tfPiso.getText(),tfMano.getText(),tfTelfPersonal.getText(),tfTelfMovil.getText(),tfSalario.getText(),fecha, tipo);
+                    Main.crearUsuario(ftfDNI.getText(),tfNombre.getText(),tfApe1.getText(),tfApe2.getText(),tfCalle.getText(),tfPortal.getText(),tfPiso.getText(),tfMano.getText(),tfTelfPersonal.getText(),tfTelfMovil.getText(),tfSalario.getText(),fecha, tipo, Integer.parseInt(cbIdCentro.getSelectedItem().toString()), tfUsuario.getText(), pass);
                 } catch (SQLException ex) {
                     Logger.getLogger(VistaTrabajador.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -570,7 +581,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
             try {
                 tfNomCentro.setText(Main.getCentro(cbIdCentro.getSelectedIndex()));
             } catch (SQLException ex) {
-                Logger.getLogger(VistaCentro.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(VistaTrabajador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_cbIdCentroActionPerformed
@@ -604,6 +615,9 @@ public class VistaTrabajador extends javax.swing.JFrame {
         rbLogistica.setEnabled(b);
         bAceptar.setEnabled(b);
         bBorrar.setEnabled(b);
+        cbIdCentro.setEnabled(b);
+        tfUsuario.setEnabled(b);
+        passField.setEnabled(b);
         if(!b){
             tfNombre.setText(null);
             tfApe1.setText(null);
@@ -617,6 +631,10 @@ public class VistaTrabajador extends javax.swing.JFrame {
             tfSalario.setText(null);
             dateChooserCombo1.setSelectedDate(null); 
             bgTipoTra.clearSelection();
+            cbIdCentro.setSelectedIndex(-1);
+            tfNomCentro.setText(null);
+            tfUsuario.setText(null);
+            passField.setText(null);
         }
     }
     private void getData(){
@@ -624,7 +642,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
         try{
             Main.rellenaDatos(ftfDNI.getText());
         }catch(SQLException ex){
-            System.out.print(ex);
+            
         }
     }
     public void nuevo(){
@@ -640,13 +658,95 @@ public class VistaTrabajador extends javax.swing.JFrame {
         bCheck.setText("Cambiar");
         bBorrar.setEnabled(true);
     }
+      
+    
     private boolean validar(){
-        boolean r = true;
-        if(tfNombre.getText().length()==0 || tfApe1.getText().length()==0 || tfApe2.getText().length()==0 || tfCalle.getText().length()==0 || tfPortal.getText().length()==0 || tfPiso.getText().length()==0 || tfMano.getText().length()==0 || tfTelfMovil.getText().length()==0)
-            r = false;
-        return r;
+                
+        boolean validado = true;
+        String informeinvalidos="";
+        Pattern pat;
+        Matcher mat;
+            if(ftfDNI.getText() != null){
+            pat = Pattern.compile("^[0-9]{8}[a-zA-Z]{1}$");
+            mat = pat.matcher(ftfDNI.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "DNI invalido\n";}
+            }else{
+                validado = false;
+            }
+            
+            if(tfNombre.getText() != null){
+            pat = Pattern.compile("^[A-Z]{1}[a-z]+$");
+            mat = pat.matcher(tfNombre.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "Nombre invalido\n";}
+            }else{
+                validado = false;
+            }
+            
+            if(tfApe1.getText() != null){
+            pat = Pattern.compile("^[A-Z]{1}[a-z]+$");
+            mat = pat.matcher(tfApe1.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "1er apellido invalido\n";}
+            }else{
+                validado = false;
+            }
+          
+            if(tfApe2.getText() != null){
+            pat = Pattern.compile("^[A-Z]{1}[a-z]+$");
+            mat = pat.matcher(tfApe2.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "2º apellido invalido\n";}
+            }else{
+                validado = false;
+            }
+            
+            if(tfCalle.getText() != null){
+            pat = Pattern.compile("^[A-Z]{1}[a-z A-Z]+$");
+            mat = pat.matcher(tfCalle.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "Calle invalida\n";}
+            }
+            
+            if(tfPortal.getText() != null){
+            pat = Pattern.compile("^[1-100]$");
+            mat = pat.matcher(tfPortal.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "Portal invalido\n";}
+            }
+            
+            if(tfPiso.getText() != null){
+            pat = Pattern.compile("^[1-10]$");
+            mat = pat.matcher(tfPiso.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "Piso invalido\n";}
+            }
+            
+            if(tfMano.getText() != null){
+            pat = Pattern.compile("^[ABCD]{1}$");
+            mat = pat.matcher(tfMano.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "Mano invalida\n";}
+            }
+            
+            if(tfTelfMovil.getText() != null){
+            pat = Pattern.compile("^[0-9]{9}$");
+            mat = pat.matcher(tfTelfMovil.getText());
+                if (!mat.find()) {validado = false; informeinvalidos += "Telefono movil empresa invalido\n";}
+            }else{
+                validado = false;
+            }
+            
+            if(tfTelfPersonal.getText() != null || tfTelfPersonal.getText().compareTo("")==0){
+            pat = Pattern.compile("^[0-9]{9}$");
+            mat = pat.matcher(tfTelfPersonal.getText());
+                if (!mat.find()) {
+                    validado = false; informeinvalidos += "Telefono personal invalido\n";}
+            }
+            
+            if(tfSalario.getText() == null || tfSalario.getText().compareTo("")==0){
+                validado = false; informeinvalidos += "Salario invalido";}
+            
+            if(!validado)
+                JOptionPane.showMessageDialog(null,"ERRORES:\n" + informeinvalidos);    
+            
+            return validado;
     }
-    public void rellenar(String nombre, String ape1, String ape2, String calle, String portal, String piso, String mano, String tlfper, String movilemp, Float salario, Date fecha){
+    
+    public void rellenar(String nombre, String ape1, String ape2, String calle, String portal, String piso, String mano, String tlfper, String movilemp, Float salario, Date fecha, int index, String user, String pass){
         tfNombre.setText(nombre);
         tfApe1.setText(ape1);
         tfApe2.setText(ape2);
@@ -665,7 +765,11 @@ public class VistaTrabajador extends javax.swing.JFrame {
             cal.setTime(fecha);
             dateChooserCombo1.setSelectedDate(cal);
         }else
-            dateChooserCombo1.setSelectedDate(null);        
+            dateChooserCombo1.setSelectedDate(null);  
+        cbIdCentro.setSelectedIndex(index);
+        tfUsuario.setText(user);
+        passField.setText(pass);
+        
     }
     public void setTipo(String tipo){
         if(tipo.compareToIgnoreCase("Administracion")==0){
@@ -686,6 +790,7 @@ public class VistaTrabajador extends javax.swing.JFrame {
         cal.set(1, cal.get(1)-10);
         dateChooserCombo1.setMaxDate(cal);
         dateChooserCombo1.setSelectedDate(null);
+        editable(false);
         setVisible(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

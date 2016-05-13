@@ -62,7 +62,7 @@ public class ParteBD {
             Logger.getLogger(ParteBD.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
         return partes;
     }

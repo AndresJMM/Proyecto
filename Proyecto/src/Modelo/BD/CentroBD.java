@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import oracle.jdbc.OracleTypes;
 
 public class CentroBD {
+
+    /**
+     * Metodo que seleciona la ID de un centro
+     * @return
+     */
     public static ArrayList getIdCentros(){
         Connection conn = GenericoBD.startConn();
         ArrayList<Integer> tCentros = new ArrayList();
@@ -25,14 +30,20 @@ public class CentroBD {
             }
         }
         catch(Exception e){
-            System.out.println("Problemas al realizar query: "+e);
+            
         }
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
         return tCentros;
     }
     
+    /**
+     * Metodo que llama aun procedimiento en el cual visualizamos todos los datos de un centro seg�n su ID
+     * @param idCentro
+     * @return
+     * @throws SQLException
+     */
     public static Centro getCentro(int idCentro) throws SQLException{
         Connection conn = GenericoBD.startConn();
         Centro c = null;
@@ -47,14 +58,20 @@ public class CentroBD {
             }
         }
         catch(Exception e){
-            System.out.println("Problemas al realizar query: "+e);
+            
             c = null;
         }
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
         return c;
     }
+
+    /**
+     * Metodo que inserta en la base de datos nuevos datos de los centros
+     * @param c
+     * @throws SQLException
+     */
     public static void alta(Centro c) throws SQLException{
         Connection conn = GenericoBD.startConn();
         
@@ -72,9 +89,15 @@ public class CentroBD {
         conn.commit();
             
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
     }
+
+    /**
+     * Metodo que modifica los datos de un centro en la base de datos
+     * @param c
+     * @throws SQLException
+     */
     public static void modificar(Centro c) throws SQLException{
         Connection conn = GenericoBD.startConn();
         String plantilla = "UPDATE CENTROS SET(NOMBRE, TELEFONO, CALLE, NUMERO, CP, CIUDAD, PROVINCIA) VALUES (?,?,?,?,?,?,?) WHERE IDCENTRO = ?";
@@ -90,10 +113,16 @@ public class CentroBD {
         ps.executeUpdate();
         conn.commit();
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
     }
 
+    /**
+     * Metodo que llama a un procedimiento en el cual se elimina un centro
+     * @param idFuente
+     * @param idDestino
+     * @throws Exception
+     */
     public static void eliminar(int idFuente, int idDestino) throws Exception {
         Connection conn = GenericoBD.startConn();
         CallableStatement cs = conn.prepareCall("{call PAC_CENTRO.borrar_centro(?,?)}");
@@ -101,7 +130,7 @@ public class CentroBD {
             cs.setInt(2, idDestino);
             cs.execute();
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
     }
     

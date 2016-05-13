@@ -13,15 +13,13 @@ import oracle.jdbc.OracleTypes;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import Modelo.UML.Parte;
+import Controladora.Main;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
+import java.sql.Date;
 
-/**
- *
- * @author andrés
- */
-public class ParteBD {
+
+public class ParteBD extends GenericoBD{
     
 public static ArrayList<Integer> rellenarTrabLog(int centro){
     ArrayList<Integer> nombresTrab = new ArrayList();   
@@ -42,64 +40,120 @@ public static ArrayList<Integer> rellenarTrabLog(int centro){
     }
     return nombresTrab;
 }
-public static Parte getPartePorID(int id) throws SQLException{
-    Parte p = new Parte();
+
+public static String getEstadoParte(int idParte) throws Exception{
+    Connection conn = GenericoBD.startConn();
+    String resultado = null;
     try{
-        Connection conn = GenericoBD.startConn();
-        String plantilla = "select * from partes where idParte = ?";
-        PreparedStatement sentenciaCon = GenericoBD.startConn().prepareStatement(plantilla);
-        sentenciaCon.setInt(1, id);
-        ResultSet rset = sentenciaCon.executeQuery();
-        if (rset.next())
-        {
-            p.setFecha(rset.getDate("fecha"));
-            p.setMatricula(rset.getString("matricula"));
-            p.setKmIni(rset.getInt("kmini"));
-            p.setKmFin(rset.getInt("kmfin"));
-            p.setGastoPeaje(rset.getInt("gastopeaje"));
-            p.setGastoGasolina(rset.getInt("gastogasolina"));
-            p.setGastoDieta(rset.getInt("gastodieta"));
-            p.setGastoOtros(rset.getInt("gastootros"));
-            p.setDescripcion(rset.getString("descripcion"));
-            GenericoBD.dropConn(conn);
-        }
+        CallableStatement cs = conn.prepareCall("{call PAC_PARTE.get_estado_parte(?,?)}");
+        cs.setInt(1, idParte);
+        cs.registerOutParameter(2, java.sql.Types.VARCHAR);
+        cs.execute();
+        resultado = cs.getString(2);
+        
     }
     catch(Exception e){
-        JOptionPane.showMessageDialog(null,"Problemas al realizar query: "+e);
+        
     }
+    if(!GenericoBD.dropConn(conn)){
+        
+    }
+    return resultado;
+}
+
+    public static void insert(Parte parte) throws Exception{
+        connect();
+        
+        String q = "insert into partes(idTrabajador, estado, fecha, kmIni, matricula) values(?, ?, ?, ?, ?)";
+        PreparedStatement ps = getCon().prepareStatement(q);
+        
+        ps.setInt(1, Main.getIdTrabajador());
+        ps.setString(2,parte.getEstado());
+        // fecha de util a sql
+        ps.setDate(3, new java.sql.Date(parte.getFecha().getTime()));
+        ps.setFloat(4, parte.getKmIni());
+        ps.setString(5, parte.getMatricula());
+        
+        ps.executeUpdate();
+        
+        disconnect();
+    }
+public static Parte getPartePorID(int id) throws Exception{
+    Parte p = new Parte();
+    
+    connect();
+    String q = "select * from partes where idParte = ?";
+    PreparedStatement r = getCon().prepareStatement(q);
+    r.setInt(1, id);
+    ResultSet rset = r.executeQuery();
+    
+    if (rset.next())
+    {
+        p.setIdParte(rset.getInt("idParte"));
+        p.setFecha(rset.getDate("fecha"));
+        p.setEstado(rset.getString("estado"));
+        p.setMatricula(rset.getString("matricula"));
+        p.setKmIni(rset.getInt("kmini"));
+        p.setKmFin(rset.getInt("kmfin"));
+        p.setGastoPeaje(rset.getFloat("gastopeaje"));
+        p.setGastoGasoil(rset.getFloat("gastogasoil"));
+        p.setGastoDieta(rset.getFloat("gastodieta"));
+        p.setGastoOtros(rset.getFloat("gastootros"));
+        p.setDescripcion(rset.getString("descripcion"));   
+    }
+    
+    disconnect();
+
     return p;
 }
 
-public static void modificacion(Parte p) throws SQLException{
-    Connection conn = GenericoBD.startConn();     
+public static void modificacion(Parte p) throws Exception{
+    connect();     
 
-    String plantilla = "update PARTES set fecha = ?, gastodieta = ?, gastogasolina = ?, gastootros = ?, gastopeaje = ?, kmfin = ?, kmini = ?, descripcion = ?, matricula = ? where idParte = ? ";
-    PreparedStatement ps=conn.prepareStatement(plantilla);
+    String q = "update PARTES set fecha = ?, gastodieta = ?, gastogasoil = ?, gastootros = ?, gastopeaje = ?, kmfin = ?, kmini = ?, descripcion = ?, matricula = ? where idParte = ? ";
+    PreparedStatement ps=getCon().prepareStatement(q);
     ps.setDate(1,new java.sql.Date(p.getFecha().getTime()));
-    ps.setInt(2,p.getGastoDieta());
-    ps.setInt(3,p.getGastoGasolina());
-    ps.setInt(4,p.getGastoOtros());
-    ps.setInt(5,p.getGastoPeaje());
-    ps.setInt(6,p.getKmFin());
-    ps.setInt(7,p.getKmIni());
+    ps.setFloat(2,p.getGastoDieta());
+    ps.setFloat(3,p.getGastoGasoil());
+    ps.setFloat(4,p.getGastoOtros());
+    ps.setFloat(5,p.getGastoPeaje());
+    ps.setFloat(6,p.getKmFin());
+    ps.setFloat(7,p.getKmIni());
     ps.setString(8,p.getDescripcion());
     ps.setString(9,p.getMatricula());
-    ps.setInt(10,p.getIdParte());
+    ps.setInt(10,Main.getIdParte());
+    
     ps.executeUpdate();
-    if(!GenericoBD.dropConn(conn)){
-        System.out.println("Problemas al cerrar");
-    }
+    
+    disconnect();
 }
 
 public static void validarParte(int id) throws SQLException {
     Connection conn = GenericoBD.startConn();
-    String plantilla = "update PARTES set estado = 'VALIDADO' where idParte = ?";
+    String plantilla = "update PARTES set estado = 'VALIDADO' where idParte = ? and UPPER(ESTADO) like 'CERRADO'";
     PreparedStatement ps = conn.prepareStatement(plantilla);
     ps.setInt(1, id); 
     ps.executeUpdate();
-    if(!GenericoBD.dropConn(conn)){
-        System.out.println("Problemas al cerrar");
-}}
+    dropConn(conn);
+}
+
+public static void cerrarParte(Parte parte) throws Exception{
+    connect();
+    
+    String q = "update PARTES set estado = 'CERRADO', kmFin=?, gastoPeaje=?, gastoDieta=?, gastoGasoil=?, gastoOtros=?, descripcion=? where idParte = ?";
+    PreparedStatement r = getCon().prepareStatement(q);
+    r.setFloat(1, parte.getKmFin());
+    r.setFloat(2, parte.getGastoPeaje());
+    r.setFloat(3, parte.getGastoDieta());
+    r.setFloat(4, parte.getGastoGasoil());
+    r.setFloat(5, parte.getGastoOtros());
+    r.setString(6, parte.getDescripcion());
+    r.setInt(7, Main.getIdParte());
+    
+    r.executeUpdate();
+    
+    disconnect();
+}
 
 public static void eliminar(int id) throws Exception {
     Connection conn = GenericoBD.startConn();
@@ -112,16 +166,31 @@ public static void eliminar(int id) throws Exception {
     }catch(Exception e){
     }
     if(!GenericoBD.dropConn(conn)){
-        System.out.println("Problemas al cerrar");
+        
     }}
+
+public static ArrayList<Integer> rellenarComboPartesLogis(int id) throws Exception{
+    ArrayList<Integer> listaIds = new ArrayList();
+        Connection conn = GenericoBD.startConn();
+        PreparedStatement sentenciaCon = conn.prepareStatement("select idParte from partes where idTrabajador = ? and Upper(estado) like 'ABIERTO'");
+        sentenciaCon.setInt(1, id);
+        ResultSet rset = sentenciaCon.executeQuery();
+        while (rset.next()){
+               listaIds.add(rset.getInt(1)); 
+        }
+        if(!GenericoBD.dropConn(conn)){
+            
+        }    
+    return listaIds;
+}    
     
-public static ArrayList<Integer> recogerPartesPorID (int id, Date fecha1, Date fecha2) throws SQLException{
+public static ArrayList<Integer> recogerPartesPorID (int id, java.util.Date fecha1, java.util.Date fecha2) throws SQLException{
         Connection conn = GenericoBD.startConn();
         java.sql.Date sqlDate1 = new java.sql.Date(fecha1.getTime());
         java.sql.Date sqlDate2 = new java.sql.Date(fecha2.getTime());
         ArrayList<Integer> idspartes = new ArrayList();
         try{
-            CallableStatement cs = conn.prepareCall("{call PAC_TRABAJADOR.get_ids_parte(?,?,?,?)}");
+            CallableStatement cs = conn.prepareCall("{call PAC_PARTE.get_ids_partes(?,?,?,?)}");
 
             cs.registerOutParameter(4, OracleTypes.CURSOR);
             cs.setInt(1, id);
@@ -135,10 +204,10 @@ public static ArrayList<Integer> recogerPartesPorID (int id, Date fecha1, Date f
             }
         }
         catch(Exception e){
-            System.out.println("Problemas al realizar query: "+e);
+            
         }
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
         return idspartes;
     }
@@ -149,7 +218,7 @@ public static ArrayList<Integer> recogerPartesPorID (int id, Date fecha1, Date f
         Connection conn = GenericoBD.startConn();
         
         Statement q = conn.createStatement();
-        ResultSet r = q.executeQuery("select idParte, fecha, estado from partes where estado = 'abierto'");
+        ResultSet r = q.executeQuery("select idParte, fecha, estado from partes where UPPER(estado) like 'ABIERTO'");
         
         while (r.next()){
                 Parte parte = new Parte();
@@ -161,20 +230,8 @@ public static ArrayList<Integer> recogerPartesPorID (int id, Date fecha1, Date f
         }
         
         if(!GenericoBD.dropConn(conn)){
-            System.out.println("Problemas al cerrar");
+            
         }
         return partes;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }    
 }

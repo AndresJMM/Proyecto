@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Vista;
-import centros.trabajadores.Main;
+import Controladora.Main;
 import Excepciones.*;
 import javax.swing.JOptionPane;
 
@@ -17,6 +17,9 @@ public class VistaLogin extends javax.swing.JFrame {
     public VistaLogin() {
         initComponents();
         setLocationRelativeTo(null);
+        getContentPane().setBackground(java.awt.Color.decode("#19C982"));
+        bEntrar.setForeground(java.awt.Color.decode("#19C982"));
+        bCancelar.setForeground(java.awt.Color.red);
     }
 
     /**
@@ -32,11 +35,12 @@ public class VistaLogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         tfUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        tfPass = new javax.swing.JTextField();
         bEntrar = new javax.swing.JButton();
         bCancelar = new javax.swing.JButton();
+        tfPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("IDENTIFICACIÓN");
@@ -66,24 +70,25 @@ public class VistaLogin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfPass))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jLabel1)
-                        .addGap(0, 34, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfUsuario))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tfUsuario))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bEntrar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                                .addComponent(bCancelar))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(bEntrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bCancelar)))
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfPass)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -99,7 +104,7 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(tfPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bEntrar)
                     .addComponent(bCancelar))
@@ -113,10 +118,10 @@ public class VistaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try
         {
-            if (tfUsuario.getText().isEmpty() || tfPass.getText().isEmpty())
+            if (tfUsuario.getText().isEmpty() || tfPass.getPassword().length==0)
                 throw new DatoObligatorio();
             else
-                Main.buscarTrabajadorPorUsuario(tfUsuario.getText(),tfPass.getText());
+                Main.buscarTrabajadorPorUsuario(tfUsuario.getText(),new String(tfPass.getPassword()));
         }
         catch(DatoObligatorio e)
         {
@@ -176,7 +181,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField tfPass;
+    private javax.swing.JPasswordField tfPass;
     private javax.swing.JTextField tfUsuario;
     // End of variables declaration//GEN-END:variables
 }
