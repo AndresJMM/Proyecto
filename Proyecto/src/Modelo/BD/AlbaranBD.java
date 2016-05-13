@@ -8,10 +8,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author Alejandra Oteiza
- */
 public class AlbaranBD extends GenericoBD{
     
     private static ArrayList<Albaran> albaranes;

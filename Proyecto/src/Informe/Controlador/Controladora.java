@@ -32,6 +32,12 @@ import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
     
+/*  
+    Este parser recoge información de las tablas PARTES y ALBARANES, almacena
+    los datos en un archivo XML en la carpeta informes, que se encuentra en la
+    raíz del proyecto, y parsea este archivo para almacenarlo en la tabla INFORMES
+*/
+
 public class Controladora extends DefaultHandler{
     
     private Document dom;

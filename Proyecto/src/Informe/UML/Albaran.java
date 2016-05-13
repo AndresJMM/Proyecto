@@ -3,24 +3,24 @@ package Informe.UML;
 import java.sql.Timestamp;
 
 public class Albaran {
-    private int idAlbaran;
+    private String idAlbaran;
     private Timestamp horaSalida;
     private Timestamp horaLLegada;
     
     public Albaran(){
     }
     
-    public Albaran(int idAlbaran, Timestamp horaSalida, Timestamp horaLLegada) {
+    public Albaran(String idAlbaran, Timestamp horaSalida, Timestamp horaLLegada) {
         this.idAlbaran = idAlbaran;
         this.horaSalida = horaSalida;
         this.horaLLegada = horaLLegada;
     }
 
-    public int getIdAlbaran() {
+    public String getIdAlbaran() {
         return idAlbaran;
     }
 
-    public void setIdAlbaran(int idAlbaran) {
+    public void setIdAlbaran(String idAlbaran) {
         this.idAlbaran = idAlbaran;
     }
 

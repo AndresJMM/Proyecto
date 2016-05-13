@@ -2,10 +2,6 @@ package Modelo.UML;
 
 import java.sql.Timestamp;
 
-/**
- *
- * @author Alejandra Oteiza
- */
 public class Albaran {
     private String idAlbaran;
     private Timestamp horaSalida;

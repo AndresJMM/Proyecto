@@ -5,10 +5,6 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-/**
- *
- * @author Alejandra Oteiza
- */
 public class Panel extends javax.swing.JPanel {
 
     private static boolean valido;

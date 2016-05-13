@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo.BD;
 
 import java.sql.CallableStatement;
@@ -69,7 +64,6 @@ public static String getEstadoParte(int idParte) throws Exception{
         
         ps.setInt(1, Main.getIdTrabajador());
         ps.setString(2,parte.getEstado());
-        // fecha de util a sql
         ps.setDate(3, new java.sql.Date(parte.getFecha().getTime()));
         ps.setFloat(4, parte.getKmIni());
         ps.setString(5, parte.getMatricula());

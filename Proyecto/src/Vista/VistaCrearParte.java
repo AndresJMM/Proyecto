@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Alejandra Oteiza
- */
 public class VistaCrearParte extends javax.swing.JFrame {
 
     /**

@@ -4,10 +4,6 @@ import java.awt.Component;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Alejandra Oteiza
- */
 public class JOptionPaneWithTimeOut{
     
     private static JOptionPane option;

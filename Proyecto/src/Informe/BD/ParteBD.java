@@ -52,7 +52,7 @@ public class ParteBD {
                 cs.execute();
                 ResultSet rsSec = (ResultSet)cs.getObject(2);
                 while(rsSec.next()){
-                    a = new Albaran(rsSec.getInt("idAlbaran"),rsSec.getTimestamp("horaSalida"),rsSec.getTimestamp("horaLlegada"));
+                    a = new Albaran(rsSec.getString("idAlbaran"),rsSec.getTimestamp("horaSalida"),rsSec.getTimestamp("horaLlegada"));
                     p.addAlbaran(a);
                 }
                 
