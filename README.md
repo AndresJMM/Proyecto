@@ -33,3 +33,4 @@
     
     ** Para conectarse a la BD, hace falta cambiar el usuario y contraseña con el que te logees a Oracle. Para cambiarlo, debemos ir a GenericoBD (en nuestro proyecto de Netbeans, Modelo.BD) y cambiarlos en los métodos 'StarConn' y 'Connect'. **
     ** En caso de necesitar importar las librerías, se encuentran en la carpeta de 'Librerías' dentro de la carpeta 'Proyecto'. **
+    BLOG -> www.proyectoiaaablog.wordpress.com
